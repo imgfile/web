@@ -1,0 +1,14 @@
+{
+  "name": "chrono-paradox-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "时间悖论：失控实验室 — 单文件可运行的浏览器时间循环解谜游戏",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node tests/verify-levels.mjs && node tests/engine.test.mjs",
+    "test:levels": "node tests/verify-levels.mjs",
+    "test:engine": "node tests/engine.test.mjs"
+  },
+  "keywords": ["game", "puzzle", "time-loop", "canvas"],
+  "license": "UNLICENSED"
+}

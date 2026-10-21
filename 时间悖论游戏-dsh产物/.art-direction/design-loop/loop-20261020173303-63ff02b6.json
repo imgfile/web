@@ -1,0 +1,2641 @@
+{
+  "protocol": "frontend-art-direction/design-loop-session-v1",
+  "version": 1,
+  "id": "loop-20261020173303-63ff02b6",
+  "status": "complete",
+  "mode": "create",
+  "createdAt": "2026-10-20T17:33:03.308Z",
+  "updatedAt": "2026-10-20T18:43:39.067Z",
+  "projectRoot": "C:\\Users\\root\\AppData\\Local\\Temp\\chrono-paradox-lab",
+  "query": "原创浏览器时间循环解谜游戏：时间回响与因果锚的完整叙事体验",
+  "scope": "substantial",
+  "operation": {
+    "operation": "harden",
+    "label": "Harden",
+    "confidence": "medium",
+    "evidence": [
+      "完整"
+    ],
+    "purpose": "finish the declared scope, state matrix, responsive path, fallback, and ending before surface polish",
+    "mode": "experience",
+    "needsDirection": false,
+    "directionQuestion": null,
+    "candidates": [
+      "harden"
+    ],
+    "next": "Inspect the target state, apply harden, then capture and compare the real render."
+  },
+  "surfaceMode": {
+    "mode": "experience",
+    "label": "Experience",
+    "confidence": "high",
+    "evidence": {
+      "hits": [
+        "叙事"
+      ],
+      "source": "query"
+    },
+    "candidates": [
+      "experience"
+    ],
+    "decision": "What should the visitor notice, feel, explore, or inhabit?",
+    "proof": "a specific subject, a deliberate attention path, and an authored transition or ending",
+    "avoid": "generic interaction effects without a subject or formal point of view",
+    "perSurface": true
+  },
+  "qualityBar": {
+    "version": 1,
+    "targetScore": 8,
+    "scale": {
+      "1": "generic, broken, or unsupported by evidence",
+      "5": "usable but ordinary, inconsistent, or only partly proven",
+      "8": "coherent, specific, complete, and supported by rendered evidence",
+      "10": "exceptional craft with a clear point of view and no material gaps"
+    },
+    "dimensions": [
+      {
+        "id": "subject-fit",
+        "label": "Subject fit",
+        "weight": 1.4,
+        "question": "Does the visual language come from the real subject, audience, content, or workflow?"
+      },
+      {
+        "id": "hierarchy",
+        "label": "Hierarchy",
+        "weight": 1.3,
+        "question": "Can a viewer identify the dominant object, reading order, counterweight, and next action quickly?"
+      },
+      {
+        "id": "composition",
+        "label": "Composition",
+        "weight": 1.3,
+        "question": "Does the silhouette, proportion, rhythm, and spatial relationship have a deliberate point of view?"
+      },
+      {
+        "id": "type-and-content",
+        "label": "Type and content",
+        "weight": 1.1,
+        "question": "Do typography, copy, data density, language, and wrapping support the chosen experience?"
+      },
+      {
+        "id": "material-and-assets",
+        "label": "Material and assets",
+        "weight": 1.1,
+        "question": "Do surfaces, imagery, texture, color, and depth feel authored and remain sharp at the target sizes?"
+      },
+      {
+        "id": "interaction-and-motion",
+        "label": "Interaction and motion",
+        "weight": 0.9,
+        "question": "Do interactions clarify state, continuity, feedback, or spatial relationships with cleanup and fallback?"
+      },
+      {
+        "id": "responsive-and-states",
+        "label": "Responsive and states",
+        "weight": 1.2,
+        "question": "Does the design remain intentional across viewports and important non-default states?"
+      },
+      {
+        "id": "originality",
+        "label": "Originality",
+        "weight": 1.1,
+        "question": "Does the result synthesize references into its own identity instead of looking like a template or a collage?"
+      },
+      {
+        "id": "completion-and-proof",
+        "label": "Completion and proof",
+        "weight": 1.4,
+        "question": "Is the declared scope complete, runnable, accessible, and proven with current rendered evidence?"
+      }
+    ],
+    "requiredProof": [
+      "static",
+      "runtime",
+      "visual",
+      "accessibility",
+      "scope"
+    ]
+  },
+  "researchAtlas": {
+    "id": "atlas-20261020173303-763a6993",
+    "path": ".art-direction/research-atlas/atlas-20261020173303-763a6993.json",
+    "status": "complete"
+  },
+  "currentRound": 21,
+  "rounds": [
+    {
+      "round": 1,
+      "id": "context",
+      "objective": "Read the request, project, audience, device, and existing visual authority.",
+      "artifact": "requirement-frame",
+      "source": "human-design",
+      "evidence": [
+        {
+          "ref": "PRODUCT.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2088,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "目标不是做落地页而是完整玩法的体验体；受众为时间循环/机关解谜玩家；桌面优先、移动端可玩；以 PRODUCT.md 的原创实验游戏定位为准。",
+          "evidence": [
+            {
+              "ref": "PRODUCT.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 2088,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:45.897Z"
+        }
+      ],
+      "decision": "目标不是做落地页而是完整玩法的体验体；受众为时间循环/机关解谜玩家；桌面优先、移动端可玩；以 PRODUCT.md 的原创实验游戏定位为准。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 2,
+      "id": "job",
+      "objective": "Name the visitor's primary job and the result that proves it.",
+      "artifact": "surface-mode",
+      "source": "openai-context",
+      "evidence": [
+        {
+          "ref": "GAME_DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 4385,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "体验模式为 open-experience：玩家要获得可操作、可失败、可读因果、可完成双结局的时间循环解谜体验；成功标准是完整八关与终局。",
+          "evidence": [
+            {
+              "ref": "GAME_DESIGN.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 4385,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:45.979Z"
+        }
+      ],
+      "decision": "体验模式为 open-experience：玩家要获得可操作、可失败、可读因果、可完成双结局的时间循环解谜体验；成功标准是完整八关与终局。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 3,
+      "id": "constraints",
+      "objective": "Separate hard invariants from preferences, risks, and reversible choices.",
+      "artifact": "constraint-register",
+      "source": "frontend-design-codex",
+      "evidence": [
+        {
+          "ref": "README.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 8693,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "硬约束：纯 HTML/CSS/JS 无依赖、双击可运行、键盘与触屏完整、reduced-motion、存档可恢复、审计日志落盘；视觉偏好则服务因果可读性。",
+          "evidence": [
+            {
+              "ref": "README.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 8693,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.037Z"
+        }
+      ],
+      "decision": "硬约束：纯 HTML/CSS/JS 无依赖、双击可运行、键盘与触屏完整、reduced-motion、存档可恢复、审计日志落盘；视觉偏好则服务因果可读性。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 4,
+      "id": "evidence",
+      "objective": "Inspect routes, components, tokens, content, assets, runtime entrypoints, and sibling surfaces.",
+      "artifact": "evidence-map",
+      "source": "avoid-ai-design",
+      "evidence": [
+        {
+          "ref": "js/engine.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 27135,
+          "valid": null
+        },
+        {
+          "ref": "js/game.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 125147,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "本地证据：原生 Canvas 渲染器与纯逻辑引擎已经建立；检查了关卡数据、状态机、日志接口与本地服务器的真实运行路径。",
+          "evidence": [
+            {
+              "ref": "js/engine.js",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 27135,
+              "valid": null
+            },
+            {
+              "ref": "js/game.js",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 125147,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/game-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 539226,
+              "valid": true
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.093Z"
+        }
+      ],
+      "decision": "本地证据：原生 Canvas 渲染器与纯逻辑引擎已经建立；检查了关卡数据、状态机、日志接口与本地服务器的真实运行路径。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 5,
+      "id": "references",
+      "objective": "Choose references by missing job; extract visible relationships instead of copying skins.",
+      "artifact": "reference-ledger",
+      "source": "reference-composition",
+      "evidence": [
+        {
+          "ref": ".art-direction/research-atlas/atlas-20261020173303-763a6993.json",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 10180,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/design-directions.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2037,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "开启研究图谱并选择项目自有 DESIGN.md 作为唯一视觉权威；没有发现值得借用的外部游戏页面，避免用参考皮肤替代原创机制。",
+          "evidence": [
+            {
+              "ref": ".art-direction/research-atlas/atlas-20261020173303-763a6993.json",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 10180,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/design-directions.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 2037,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.149Z"
+        }
+      ],
+      "decision": "开启研究图谱并选择项目自有 DESIGN.md 作为唯一视觉权威；没有发现值得借用的外部游戏页面，避免用参考皮肤替代原创机制。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 6,
+      "id": "vernacular",
+      "objective": "Find the subject's materials, artifacts, culture, language, and visual vocabulary.",
+      "artifact": "subject-thesis",
+      "source": "anthropic-frontend-design",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "题材原生语汇来自实验室仪器、时间环、因果锚、封印闸和档案编号；视觉结构由这些真实对象推导。",
+          "evidence": [
+            {
+              "ref": "DESIGN.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 6140,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/title-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 652334,
+              "valid": true
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.207Z"
+        }
+      ],
+      "decision": "题材原生语汇来自实验室仪器、时间环、因果锚、封印闸和档案编号；视觉结构由这些真实对象推导。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 7,
+      "id": "defaults",
+      "objective": "Run a first-order and second-order AI-default scan before choosing a direction.",
+      "artifact": "anti-default-review",
+      "source": "avoid-ai-design",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/design-directions.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2037,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "拒绝居中英雄页、玻璃卡片墙、紫蓝霓虹渐隐、无机制支撑的装饰动效；保留仪器面板、真实读数和可玩的因果棋盘作为第一主体。",
+          "evidence": [
+            {
+              "ref": "DESIGN.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 6140,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/design-directions.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 2037,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.265Z"
+        }
+      ],
+      "decision": "拒绝居中英雄页、玻璃卡片墙、紫蓝霓虹渐隐、无机制支撑的装饰动效；保留仪器面板、真实读数和可玩的因果棋盘作为第一主体。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 8,
+      "id": "diverge",
+      "objective": "Create 3-5 structurally different directions, not cosmetic palette variants.",
+      "artifact": "concept-set",
+      "source": "openai-ideate",
+      "evidence": [
+        {
+          "ref": "artifacts/design-directions.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2037,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "比较四种结构：仪器化观察窗、纸质事故档案、钟表机械剧场、霓虹控制室；只有第一种同时支持实时棋盘/回响可视/机关读数与响应式重排。",
+          "evidence": [
+            {
+              "ref": "artifacts/design-directions.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 2037,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.322Z"
+        }
+      ],
+      "decision": "比较四种结构：仪器化观察窗、纸质事故档案、钟表机械剧场、霓虹控制室；只有第一种同时支持实时棋盘/回响可视/机关读数与响应式重排。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 9,
+      "id": "converge",
+      "objective": "Choose one direction against subject fit, hierarchy, emotional register, feasibility, and responsive viability.",
+      "artifact": "direction-verdict",
+      "source": "ideo-create-choices",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "选择 A 仪器化观察窗：左任务轨道、中央最大因果观测窗、右因果监控台；标题页以时间核心与三个回响剪影为主视觉。",
+          "evidence": [
+            {
+              "ref": "DESIGN.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 6140,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/title-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 652334,
+              "valid": true
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.382Z"
+        }
+      ],
+      "decision": "选择 A 仪器化观察窗：左任务轨道、中央最大因果观测窗、右因果监控台；标题页以时间核心与三个回响剪影为主视觉。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 10,
+      "id": "contract",
+      "objective": "Write the chosen composition, type, geometry, material, motion, asset, and exception contract.",
+      "artifact": "design-contract",
+      "source": "ui-ux-pro-max",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "写入完整 Visual Direction Contract：非对称实验台、青玉/紫铜/石墨材料、仪器字体层级、局部细线、12px 舞台圆角与全量动效降级。",
+          "evidence": [
+            {
+              "ref": "DESIGN.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 6140,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.442Z"
+        }
+      ],
+      "decision": "写入完整 Visual Direction Contract：非对称实验台、青玉/紫铜/石墨材料、仪器字体层级、局部细线、12px 舞台圆角与全量动效降级。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 11,
+      "id": "system",
+      "objective": "Extract tokens, type roles, component families, icon grammar, and page-specific overrides.",
+      "artifact": "design-system",
+      "source": "ui-ux-pro-max-persist",
+      "evidence": [
+        {
+          "ref": "css/style.css",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 90163,
+          "valid": null
+        },
+        {
+          "ref": "js/renderer.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 83863,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "从契约抽取 tokens、字体角色、按钮/弹窗/状态条/棋盘装置族与图形语汇；避免每一条内容都包成卡片。",
+          "evidence": [
+            {
+              "ref": "css/style.css",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 90163,
+              "valid": null
+            },
+            {
+              "ref": "js/renderer.js",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 83863,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.501Z"
+        }
+      ],
+      "decision": "从契约抽取 tokens、字体角色、按钮/弹窗/状态条/棋盘装置族与图形语汇；避免每一条内容都包成卡片。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 12,
+      "id": "storyboard",
+      "objective": "Plan the full surface, states, route transitions, responsive continuation, and ending.",
+      "artifact": "surface-storyboard",
+      "source": "frontend-app-builder",
+      "evidence": [
+        {
+          "ref": "GAME_DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 4385,
+          "valid": null
+        },
+        {
+          "ref": "README.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 8693,
+          "valid": null
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "完整故事板：标题→开场三页→八扇区→结算→核心选择→尾声→标题/档案；定义关卡选择、暂停、设置、手册与错误恢复。",
+          "evidence": [
+            {
+              "ref": "GAME_DESIGN.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 4385,
+              "valid": null
+            },
+            {
+              "ref": "README.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 8693,
+              "valid": null
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.560Z"
+        }
+      ],
+      "decision": "完整故事板：标题→开场三页→八扇区→结算→核心选择→尾声→标题/档案；定义关卡选择、暂停、设置、手册与错误恢复。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 13,
+      "id": "assets",
+      "objective": "Source or generate production-quality media and reject placeholders, fake metrics, and weak crops.",
+      "artifact": "asset-inventory",
+      "source": "frontend-app-builder",
+      "evidence": [
+        {
+          "ref": "js/renderer.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 83863,
+          "valid": null
+        },
+        {
+          "ref": "js/audio.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 15696,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "资产策略为全程序化：Canvas 绘制地块、门、回响、锚、粒子与时间核心；WebAudio 合成环境声与音效；无外部媒体或字体 CDN。",
+          "evidence": [
+            {
+              "ref": "js/renderer.js",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 83863,
+              "valid": null
+            },
+            {
+              "ref": "js/audio.js",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 15696,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/title-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 652334,
+              "valid": true
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.619Z"
+        }
+      ],
+      "decision": "资产策略为全程序化：Canvas 绘制地块、门、回响、锚、粒子与时间核心；WebAudio 合成环境声与音效；无外部媒体或字体 CDN。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 14,
+      "id": "skeleton",
+      "objective": "Build the semantic and interactive skeleton with real content and the intended container model.",
+      "artifact": "working-surface",
+      "source": "frontend-app-builder",
+      "evidence": [
+        {
+          "ref": "index.html",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 47037,
+          "valid": null
+        },
+        {
+          "ref": "js/game.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 125147,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "完成语义骨架与可玩垂直切片：真实引擎、真实八关数据、可进入的关卡、完整 HUD、暂停/设置/档案/结局容器与本地日志服务。",
+          "evidence": [
+            {
+              "ref": "index.html",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 47037,
+              "valid": null
+            },
+            {
+              "ref": "js/game.js",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 125147,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/game-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 539226,
+              "valid": true
+            }
+          ],
+          "proof": [],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.677Z"
+        }
+      ],
+      "decision": "完成语义骨架与可玩垂直切片：真实引擎、真实八关数据、可进入的关卡、完整 HUD、暂停/设置/档案/结局容器与本地日志服务。",
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 15,
+      "id": "baseline",
+      "objective": "Run the target and capture the actual desktop, mobile, and relevant state before judging polish.",
+      "artifact": "baseline-captures",
+      "source": "design-review",
+      "evidence": [
+        {
+          "ref": "artifacts/baseline-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 509864,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/baseline-mobile-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 141652,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "基线构建在浏览器中运行并取得桌面 1440×900 与移动 390×844 截图；识别出棋盘对比、移动端空舞台和控制可达性问题。",
+          "evidence": [
+            {
+              "ref": "artifacts/baseline-game-v1.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 509864,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/baseline-mobile-game-v1.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 141652,
+              "valid": true
+            }
+          ],
+          "proof": [
+            "visual",
+            "baseline"
+          ],
+          "issues": [],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": null,
+          "repair": null,
+          "verdict": null,
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:39:46.736Z"
+        }
+      ],
+      "decision": "基线构建在浏览器中运行并取得桌面 1440×900 与移动 390×844 截图；识别出棋盘对比、移动端空舞台和控制可达性问题。",
+      "proof": [
+        "visual",
+        "baseline"
+      ],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": []
+    },
+    {
+      "round": 16,
+      "id": "macro",
+      "objective": "Fix the biggest visible defect first: scope, silhouette, hierarchy, composition, content, or media.",
+      "artifact": "macro-revision",
+      "source": "screenshot-critique",
+      "evidence": [
+        {
+          "ref": "artifacts/baseline-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 509864,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "修复最大视觉缺陷：提升棋盘墙体与地面的明度层次、加入因果线/玩家足环/回响轨迹；放大机关字母与形状编码；把回响主操作变成明确可用状态；移动端增加真实监控和舞台高度约束。",
+          "evidence": [
+            {
+              "ref": "artifacts/baseline-game-v1.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 509864,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/game-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 539226,
+              "valid": true
+            }
+          ],
+          "proof": [
+            "desktop-before",
+            "desktop-after",
+            "comparison"
+          ],
+          "issues": [
+            "P2:toast-overlaps-monitor"
+          ],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": "初版棋盘墙地关系和因果状态过暗，机关难以读取，主操作与移动端内容层级不清晰。",
+          "repair": "重做墙体材质与地面网格，加入因果连线、足下锚环和回响路径；放亮状态；让回响主按钮与禁用状态明确；重排移动端舞台与监控。",
+          "verdict": null,
+          "comparison": [
+            {
+              "ref": "artifacts/comparison-round16-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 1014845,
+              "valid": true
+            }
+          ],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:40:33.567Z"
+        }
+      ],
+      "decision": "修复最大视觉缺陷：提升棋盘墙体与地面的明度层次、加入因果线/玩家足环/回响轨迹；放大机关字母与形状编码；把回响主操作变成明确可用状态；移动端增加真实监控和舞台高度约束。",
+      "proof": [
+        "desktop-before",
+        "desktop-after",
+        "comparison"
+      ],
+      "issues": [
+        "P2:toast-overlaps-monitor"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "初版棋盘墙地关系和因果状态过暗，机关难以读取，主操作与移动端内容层级不清晰。",
+      "repair": "重做墙体材质与地面网格，加入因果连线、足下锚环和回响路径；放亮状态；让回响主按钮与禁用状态明确；重排移动端舞台与监控。",
+      "verdict": null,
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round16-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1014845,
+          "valid": true
+        }
+      ],
+      "critique": []
+    },
+    {
+      "round": 17,
+      "id": "responsive",
+      "objective": "Re-stage the design for mobile, tablet, touch, text wrapping, and input behavior.",
+      "artifact": "responsive-captures",
+      "source": "design-review",
+      "evidence": [
+        {
+          "ref": "artifacts/baseline-mobile-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 141652,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 144150,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 151053,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/archive-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 196851,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "按竖屏重新设计而非缩放桌面：舞台+因果监控条+44px拇指区；紧凑任务可两行；档案页加入固定进入扇区 CTA；结束页收紧到一屏内可见两个选择。",
+          "evidence": [
+            {
+              "ref": "artifacts/baseline-mobile-game-v1.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 141652,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/game-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 144150,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/sync-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 151053,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/archive-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 196851,
+              "valid": true
+            }
+          ],
+          "proof": [
+            "mobile-before",
+            "mobile-after",
+            "comparison"
+          ],
+          "issues": [
+            "P2:archive-map-below-fold"
+          ],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": "移动端初版舞台大半为空，监控信息丢失，操作按钮未对齐，档案主操作远在首屏之外。",
+          "repair": "移动端三段式布局、监控条、44px方向键、粘性档案CTA、紧凑任务栏与toast位置调整；对状态和终局页重新分配空间。",
+          "verdict": null,
+          "comparison": [
+            {
+              "ref": "artifacts/comparison-round17-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 297495,
+              "valid": true
+            }
+          ],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:40:33.653Z"
+        }
+      ],
+      "decision": "按竖屏重新设计而非缩放桌面：舞台+因果监控条+44px拇指区；紧凑任务可两行；档案页加入固定进入扇区 CTA；结束页收紧到一屏内可见两个选择。",
+      "proof": [
+        "mobile-before",
+        "mobile-after",
+        "comparison"
+      ],
+      "issues": [
+        "P2:archive-map-below-fold"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "移动端初版舞台大半为空，监控信息丢失，操作按钮未对齐，档案主操作远在首屏之外。",
+      "repair": "移动端三段式布局、监控条、44px方向键、粘性档案CTA、紧凑任务栏与toast位置调整；对状态和终局页重新分配空间。",
+      "verdict": null,
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round17-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 297495,
+          "valid": true
+        }
+      ],
+      "critique": []
+    },
+    {
+      "round": 18,
+      "id": "states",
+      "objective": "Exercise loading, empty, error, success, focus, reduced-motion, transition, and recovery paths.",
+      "artifact": "state-captures",
+      "source": "ui-ux-pro-max",
+      "evidence": [
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 601506,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/settings-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 121671,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/reduced-motion-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 524475,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/result-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 208228,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 151053,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "逐一在真实浏览器中检查默认、回响、倒带、同步、结算、设置和 reduced-motion 状态；修复 Canvas 因果线在渲染时使用未绑定 this 导致画面冻结的缺陷，并验证状态控件与移动端监控条。",
+          "evidence": [
+            {
+              "ref": "artifacts/game-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 539226,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/sync-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 601506,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/settings-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 121671,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/reduced-motion-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 524475,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/result-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 208228,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/sync-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 151053,
+              "valid": true
+            }
+          ],
+          "proof": [
+            "state-captures",
+            "reduced-motion",
+            "desktop-after",
+            "mobile-after"
+          ],
+          "issues": [
+            "P2:toast-overlaps-monitor",
+            "P3:micro-labels-small"
+          ],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": "非默认状态缺少静帧证据；真实渲染时因果线绘制会导致 Canvas 停止；移动端状态读数不完整。",
+          "repair": "修复渲染器 this 绑定并增加渲染异常恢复；补齐同步、结算、设置、减少动效截图；新增移动端监控条和状态提示。",
+          "verdict": null,
+          "comparison": [
+            {
+              "ref": "artifacts/comparison-round18-states.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 1042617,
+              "valid": true
+            }
+          ],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:40:33.713Z"
+        }
+      ],
+      "decision": "逐一在真实浏览器中检查默认、回响、倒带、同步、结算、设置和 reduced-motion 状态；修复 Canvas 因果线在渲染时使用未绑定 this 导致画面冻结的缺陷，并验证状态控件与移动端监控条。",
+      "proof": [
+        "state-captures",
+        "reduced-motion",
+        "desktop-after",
+        "mobile-after"
+      ],
+      "issues": [
+        "P2:toast-overlaps-monitor",
+        "P3:micro-labels-small"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "非默认状态缺少静帧证据；真实渲染时因果线绘制会导致 Canvas 停止；移动端状态读数不完整。",
+      "repair": "修复渲染器 this 绑定并增加渲染异常恢复；补齐同步、结算、设置、减少动效截图；新增移动端监控条和状态提示。",
+      "verdict": null,
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round18-states.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1042617,
+          "valid": true
+        }
+      ],
+      "critique": []
+    },
+    {
+      "round": 19,
+      "id": "fresh-eyes",
+      "objective": "Compare before/after and run an unprimed critique without implementation history bias.",
+      "artifact": "independent-critique",
+      "source": "screenshot-critique",
+      "evidence": [
+        {
+          "ref": "artifacts/sync-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 601506,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 144150,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/archive-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 430427,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/comparison-round16-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1014845,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "独立视觉复核基于最终同步状态截图、桌面与移动端游戏界面，结论为 CURRENT WINS；无开放 P0/P1。记录四个非阻塞项：toast 短暂遮挡监控、档案示意图过小、微标签偏小、移动端档案预览在折叠下方。",
+          "evidence": [
+            {
+              "ref": "artifacts/sync-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 601506,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/game-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 144150,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/archive-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 430427,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/comparison-round16-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 1014845,
+              "valid": true
+            }
+          ],
+          "proof": [
+            "visual",
+            "fresh-eyes",
+            "critique"
+          ],
+          "issues": [
+            "P2:toast-monitor-overlap",
+            "P2:schematic-legibility",
+            "P3:micro-label-scale",
+            "P3:mobile-archive-preview"
+          ],
+          "score": null,
+          "dimensionScores": {},
+          "calculatedScore": null,
+          "largestGap": "toast 在因果反馈最强时短暂遮住监控台的循环与回响读数；档案示意图的战术信息密度偏低。",
+          "repair": "已确认无 P0/P1；将四项作为明确记录的非阻塞后续，并在实机回归中验证所有主要操作仍可达。",
+          "verdict": "CURRENT WINS",
+          "comparison": [
+            {
+              "ref": "artifacts/comparison-round16-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 1014845,
+              "valid": true
+            }
+          ],
+          "critique": [
+            {
+              "ref": ".art-direction/visual-critique/critique-20261020184241-092b39e4.json",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 6052,
+              "valid": null
+            }
+          ],
+          "recordedAt": "2026-10-20T18:43:38.949Z"
+        }
+      ],
+      "decision": "独立视觉复核基于最终同步状态截图、桌面与移动端游戏界面，结论为 CURRENT WINS；无开放 P0/P1。记录四个非阻塞项：toast 短暂遮挡监控、档案示意图过小、微标签偏小、移动端档案预览在折叠下方。",
+      "proof": [
+        "visual",
+        "fresh-eyes",
+        "critique"
+      ],
+      "issues": [
+        "P2:toast-monitor-overlap",
+        "P2:schematic-legibility",
+        "P3:micro-label-scale",
+        "P3:mobile-archive-preview"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "toast 在因果反馈最强时短暂遮住监控台的循环与回响读数；档案示意图的战术信息密度偏低。",
+      "repair": "已确认无 P0/P1；将四项作为明确记录的非阻塞后续，并在实机回归中验证所有主要操作仍可达。",
+      "verdict": "CURRENT WINS",
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round16-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1014845,
+          "valid": true
+        }
+      ],
+      "critique": [
+        {
+          "ref": ".art-direction/visual-critique/critique-20261020184241-092b39e4.json",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6052,
+          "valid": null
+        }
+      ]
+    },
+    {
+      "round": 20,
+      "id": "signoff",
+      "objective": "Run static, runtime, visual, accessibility, and scope checks; record what remains open and update design memory.",
+      "artifact": "evidence-pack",
+      "source": "design-qa",
+      "evidence": [
+        {
+          "ref": "artifacts/signoff.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 5147,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 601506,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 144150,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/archive-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 196851,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/ending-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 217678,
+          "valid": true
+        }
+      ],
+      "status": "complete",
+      "attempts": [
+        {
+          "status": "complete",
+          "decision": "完成最终回归与签核：引擎测试 10/10、八关可解性 8/8、桌面与移动端真实浏览器流程通过、file:// 可运行、console 与 pageerror 为零、日志接口落盘；交付范围完整。",
+          "evidence": [
+            {
+              "ref": "artifacts/signoff.md",
+              "kind": "artifact-or-check",
+              "exists": true,
+              "size": 5147,
+              "valid": null
+            },
+            {
+              "ref": "artifacts/title-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 652334,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/game-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 539226,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/sync-desktop.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 601506,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/game-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 144150,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/archive-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 196851,
+              "valid": true
+            },
+            {
+              "ref": "artifacts/ending-mobile.png",
+              "kind": "capture-or-media",
+              "exists": true,
+              "size": 217678,
+              "valid": true
+            }
+          ],
+          "proof": [
+            "static",
+            "runtime",
+            "visual",
+            "accessibility",
+            "scope"
+          ],
+          "issues": [
+            "P2:toast-monitor-overlap",
+            "P2:schematic-legibility",
+            "P3:micro-label-scale",
+            "P3:mobile-archive-preview"
+          ],
+          "score": 8.7,
+          "dimensionScores": {
+            "subject-fit": 9,
+            "hierarchy": 8.6,
+            "composition": 8.8,
+            "type-and-content": 8.4,
+            "material-and-assets": 8.7,
+            "interaction-and-motion": 8.8,
+            "responsive-and-states": 8.3,
+            "originality": 9,
+            "completion-and-proof": 8.7
+          },
+          "calculatedScore": 8.7,
+          "largestGap": null,
+          "repair": null,
+          "verdict": "CURRENT WINS",
+          "comparison": [],
+          "critique": [],
+          "recordedAt": "2026-10-20T18:43:39.008Z"
+        }
+      ],
+      "decision": "完成最终回归与签核：引擎测试 10/10、八关可解性 8/8、桌面与移动端真实浏览器流程通过、file:// 可运行、console 与 pageerror 为零、日志接口落盘；交付范围完整。",
+      "proof": [
+        "static",
+        "runtime",
+        "visual",
+        "accessibility",
+        "scope"
+      ],
+      "issues": [
+        "P2:toast-monitor-overlap",
+        "P2:schematic-legibility",
+        "P3:micro-label-scale",
+        "P3:mobile-archive-preview"
+      ],
+      "score": 8.7,
+      "dimensionScores": {
+        "subject-fit": 9,
+        "hierarchy": 8.6,
+        "composition": 8.8,
+        "type-and-content": 8.4,
+        "material-and-assets": 8.7,
+        "interaction-and-motion": 8.8,
+        "responsive-and-states": 8.3,
+        "originality": 9,
+        "completion-and-proof": 8.7
+      },
+      "calculatedScore": 8.7,
+      "largestGap": null,
+      "repair": null,
+      "verdict": "CURRENT WINS",
+      "comparison": [],
+      "critique": []
+    }
+  ],
+  "history": [
+    {
+      "round": 1,
+      "status": "complete",
+      "decision": "目标不是做落地页而是完整玩法的体验体；受众为时间循环/机关解谜玩家；桌面优先、移动端可玩；以 PRODUCT.md 的原创实验游戏定位为准。",
+      "evidence": [
+        {
+          "ref": "PRODUCT.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2088,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:45.897Z"
+    },
+    {
+      "round": 2,
+      "status": "complete",
+      "decision": "体验模式为 open-experience：玩家要获得可操作、可失败、可读因果、可完成双结局的时间循环解谜体验；成功标准是完整八关与终局。",
+      "evidence": [
+        {
+          "ref": "GAME_DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 4385,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:45.979Z"
+    },
+    {
+      "round": 3,
+      "status": "complete",
+      "decision": "硬约束：纯 HTML/CSS/JS 无依赖、双击可运行、键盘与触屏完整、reduced-motion、存档可恢复、审计日志落盘；视觉偏好则服务因果可读性。",
+      "evidence": [
+        {
+          "ref": "README.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 8693,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.037Z"
+    },
+    {
+      "round": 4,
+      "status": "complete",
+      "decision": "本地证据：原生 Canvas 渲染器与纯逻辑引擎已经建立；检查了关卡数据、状态机、日志接口与本地服务器的真实运行路径。",
+      "evidence": [
+        {
+          "ref": "js/engine.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 27135,
+          "valid": null
+        },
+        {
+          "ref": "js/game.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 125147,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.093Z"
+    },
+    {
+      "round": 5,
+      "status": "complete",
+      "decision": "开启研究图谱并选择项目自有 DESIGN.md 作为唯一视觉权威；没有发现值得借用的外部游戏页面，避免用参考皮肤替代原创机制。",
+      "evidence": [
+        {
+          "ref": ".art-direction/research-atlas/atlas-20261020173303-763a6993.json",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 10180,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/design-directions.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2037,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.149Z"
+    },
+    {
+      "round": 6,
+      "status": "complete",
+      "decision": "题材原生语汇来自实验室仪器、时间环、因果锚、封印闸和档案编号；视觉结构由这些真实对象推导。",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.207Z"
+    },
+    {
+      "round": 7,
+      "status": "complete",
+      "decision": "拒绝居中英雄页、玻璃卡片墙、紫蓝霓虹渐隐、无机制支撑的装饰动效；保留仪器面板、真实读数和可玩的因果棋盘作为第一主体。",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/design-directions.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2037,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.265Z"
+    },
+    {
+      "round": 8,
+      "status": "complete",
+      "decision": "比较四种结构：仪器化观察窗、纸质事故档案、钟表机械剧场、霓虹控制室；只有第一种同时支持实时棋盘/回响可视/机关读数与响应式重排。",
+      "evidence": [
+        {
+          "ref": "artifacts/design-directions.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 2037,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.322Z"
+    },
+    {
+      "round": 9,
+      "status": "complete",
+      "decision": "选择 A 仪器化观察窗：左任务轨道、中央最大因果观测窗、右因果监控台；标题页以时间核心与三个回响剪影为主视觉。",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.382Z"
+    },
+    {
+      "round": 10,
+      "status": "complete",
+      "decision": "写入完整 Visual Direction Contract：非对称实验台、青玉/紫铜/石墨材料、仪器字体层级、局部细线、12px 舞台圆角与全量动效降级。",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6140,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.442Z"
+    },
+    {
+      "round": 11,
+      "status": "complete",
+      "decision": "从契约抽取 tokens、字体角色、按钮/弹窗/状态条/棋盘装置族与图形语汇；避免每一条内容都包成卡片。",
+      "evidence": [
+        {
+          "ref": "css/style.css",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 90163,
+          "valid": null
+        },
+        {
+          "ref": "js/renderer.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 83863,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.501Z"
+    },
+    {
+      "round": 12,
+      "status": "complete",
+      "decision": "完整故事板：标题→开场三页→八扇区→结算→核心选择→尾声→标题/档案；定义关卡选择、暂停、设置、手册与错误恢复。",
+      "evidence": [
+        {
+          "ref": "GAME_DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 4385,
+          "valid": null
+        },
+        {
+          "ref": "README.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 8693,
+          "valid": null
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.560Z"
+    },
+    {
+      "round": 13,
+      "status": "complete",
+      "decision": "资产策略为全程序化：Canvas 绘制地块、门、回响、锚、粒子与时间核心；WebAudio 合成环境声与音效；无外部媒体或字体 CDN。",
+      "evidence": [
+        {
+          "ref": "js/renderer.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 83863,
+          "valid": null
+        },
+        {
+          "ref": "js/audio.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 15696,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.619Z"
+    },
+    {
+      "round": 14,
+      "status": "complete",
+      "decision": "完成语义骨架与可玩垂直切片：真实引擎、真实八关数据、可进入的关卡、完整 HUD、暂停/设置/档案/结局容器与本地日志服务。",
+      "evidence": [
+        {
+          "ref": "index.html",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 47037,
+          "valid": null
+        },
+        {
+          "ref": "js/game.js",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 125147,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        }
+      ],
+      "proof": [],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.677Z"
+    },
+    {
+      "round": 15,
+      "status": "complete",
+      "decision": "基线构建在浏览器中运行并取得桌面 1440×900 与移动 390×844 截图；识别出棋盘对比、移动端空舞台和控制可达性问题。",
+      "evidence": [
+        {
+          "ref": "artifacts/baseline-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 509864,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/baseline-mobile-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 141652,
+          "valid": true
+        }
+      ],
+      "proof": [
+        "visual",
+        "baseline"
+      ],
+      "issues": [],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": null,
+      "repair": null,
+      "verdict": null,
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:39:46.736Z"
+    },
+    {
+      "round": 16,
+      "status": "complete",
+      "decision": "修复最大视觉缺陷：提升棋盘墙体与地面的明度层次、加入因果线/玩家足环/回响轨迹；放大机关字母与形状编码；把回响主操作变成明确可用状态；移动端增加真实监控和舞台高度约束。",
+      "evidence": [
+        {
+          "ref": "artifacts/baseline-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 509864,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        }
+      ],
+      "proof": [
+        "desktop-before",
+        "desktop-after",
+        "comparison"
+      ],
+      "issues": [
+        "P2:toast-overlaps-monitor"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "初版棋盘墙地关系和因果状态过暗，机关难以读取，主操作与移动端内容层级不清晰。",
+      "repair": "重做墙体材质与地面网格，加入因果连线、足下锚环和回响路径；放亮状态；让回响主按钮与禁用状态明确；重排移动端舞台与监控。",
+      "verdict": null,
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round16-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1014845,
+          "valid": true
+        }
+      ],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:40:33.567Z"
+    },
+    {
+      "round": 17,
+      "status": "complete",
+      "decision": "按竖屏重新设计而非缩放桌面：舞台+因果监控条+44px拇指区；紧凑任务可两行；档案页加入固定进入扇区 CTA；结束页收紧到一屏内可见两个选择。",
+      "evidence": [
+        {
+          "ref": "artifacts/baseline-mobile-game-v1.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 141652,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 144150,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 151053,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/archive-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 196851,
+          "valid": true
+        }
+      ],
+      "proof": [
+        "mobile-before",
+        "mobile-after",
+        "comparison"
+      ],
+      "issues": [
+        "P2:archive-map-below-fold"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "移动端初版舞台大半为空，监控信息丢失，操作按钮未对齐，档案主操作远在首屏之外。",
+      "repair": "移动端三段式布局、监控条、44px方向键、粘性档案CTA、紧凑任务栏与toast位置调整；对状态和终局页重新分配空间。",
+      "verdict": null,
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round17-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 297495,
+          "valid": true
+        }
+      ],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:40:33.653Z"
+    },
+    {
+      "round": 18,
+      "status": "complete",
+      "decision": "逐一在真实浏览器中检查默认、回响、倒带、同步、结算、设置和 reduced-motion 状态；修复 Canvas 因果线在渲染时使用未绑定 this 导致画面冻结的缺陷，并验证状态控件与移动端监控条。",
+      "evidence": [
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 601506,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/settings-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 121671,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/reduced-motion-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 524475,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/result-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 208228,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 151053,
+          "valid": true
+        }
+      ],
+      "proof": [
+        "state-captures",
+        "reduced-motion",
+        "desktop-after",
+        "mobile-after"
+      ],
+      "issues": [
+        "P2:toast-overlaps-monitor",
+        "P3:micro-labels-small"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "非默认状态缺少静帧证据；真实渲染时因果线绘制会导致 Canvas 停止；移动端状态读数不完整。",
+      "repair": "修复渲染器 this 绑定并增加渲染异常恢复；补齐同步、结算、设置、减少动效截图；新增移动端监控条和状态提示。",
+      "verdict": null,
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round18-states.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1042617,
+          "valid": true
+        }
+      ],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:40:33.713Z"
+    },
+    {
+      "round": 19,
+      "status": "complete",
+      "decision": "独立视觉复核基于最终同步状态截图、桌面与移动端游戏界面，结论为 CURRENT WINS；无开放 P0/P1。记录四个非阻塞项：toast 短暂遮挡监控、档案示意图过小、微标签偏小、移动端档案预览在折叠下方。",
+      "evidence": [
+        {
+          "ref": "artifacts/sync-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 601506,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 144150,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/archive-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 430427,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/comparison-round16-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1014845,
+          "valid": true
+        }
+      ],
+      "proof": [
+        "visual",
+        "fresh-eyes",
+        "critique"
+      ],
+      "issues": [
+        "P2:toast-monitor-overlap",
+        "P2:schematic-legibility",
+        "P3:micro-label-scale",
+        "P3:mobile-archive-preview"
+      ],
+      "score": null,
+      "dimensionScores": {},
+      "calculatedScore": null,
+      "largestGap": "toast 在因果反馈最强时短暂遮住监控台的循环与回响读数；档案示意图的战术信息密度偏低。",
+      "repair": "已确认无 P0/P1；将四项作为明确记录的非阻塞后续，并在实机回归中验证所有主要操作仍可达。",
+      "verdict": "CURRENT WINS",
+      "comparison": [
+        {
+          "ref": "artifacts/comparison-round16-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 1014845,
+          "valid": true
+        }
+      ],
+      "critique": [
+        {
+          "ref": ".art-direction/visual-critique/critique-20261020184241-092b39e4.json",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 6052,
+          "valid": null
+        }
+      ],
+      "recordedAt": "2026-10-20T18:43:38.949Z"
+    },
+    {
+      "round": 20,
+      "status": "complete",
+      "decision": "完成最终回归与签核：引擎测试 10/10、八关可解性 8/8、桌面与移动端真实浏览器流程通过、file:// 可运行、console 与 pageerror 为零、日志接口落盘；交付范围完整。",
+      "evidence": [
+        {
+          "ref": "artifacts/signoff.md",
+          "kind": "artifact-or-check",
+          "exists": true,
+          "size": 5147,
+          "valid": null
+        },
+        {
+          "ref": "artifacts/title-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 652334,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 539226,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/sync-desktop.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 601506,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/game-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 144150,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/archive-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 196851,
+          "valid": true
+        },
+        {
+          "ref": "artifacts/ending-mobile.png",
+          "kind": "capture-or-media",
+          "exists": true,
+          "size": 217678,
+          "valid": true
+        }
+      ],
+      "proof": [
+        "static",
+        "runtime",
+        "visual",
+        "accessibility",
+        "scope"
+      ],
+      "issues": [
+        "P2:toast-monitor-overlap",
+        "P2:schematic-legibility",
+        "P3:micro-label-scale",
+        "P3:mobile-archive-preview"
+      ],
+      "score": 8.7,
+      "dimensionScores": {
+        "subject-fit": 9,
+        "hierarchy": 8.6,
+        "composition": 8.8,
+        "type-and-content": 8.4,
+        "material-and-assets": 8.7,
+        "interaction-and-motion": 8.8,
+        "responsive-and-states": 8.3,
+        "originality": 9,
+        "completion-and-proof": 8.7
+      },
+      "calculatedScore": 8.7,
+      "largestGap": null,
+      "repair": null,
+      "verdict": "CURRENT WINS",
+      "comparison": [],
+      "critique": [],
+      "recordedAt": "2026-10-20T18:43:39.008Z"
+    }
+  ],
+  "qualityScore": 8.7,
+  "completedAt": "2026-10-20T18:43:39.067Z"
+}

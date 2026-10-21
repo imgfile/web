@@ -1,0 +1,15 @@
+# 运行时日志与本地审计产物
+logs/*.log
+logs/*.ndjson
+
+# 设计过程产物
+.art-direction/
+artifacts/*.png
+artifacts/*.jpg
+artifacts/*.webp
+artifacts/*.md
+
+# 系统
+.DS_Store
+Thumbs.db
+node_modules/

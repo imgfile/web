@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#070a0d">
+  <meta name="description" content="《时间悖论：失控实验室》——一款以时间回响与因果锚为核心机制的浏览器解谜游戏。">
+  <title>时间悖论：失控实验室 / CHRONO PARADOX</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070a0d'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%2364f5d2' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='9' fill='none' stroke='%23e7a46a' stroke-width='2'/%3E%3Cpath d='M32 8v10M32 46v10M8 32h10M46 32h10' stroke='%2364f5d2' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="skip-link"><a href="#screen-root">跳到主要内容</a></div>
+  <canvas id="ambient-canvas" class="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-vignette" aria-hidden="true"></div>
+  <div class="grain-layer" aria-hidden="true"></div>
+
+  <div id="screen-root">
+    <!-- =================================================================
+         标题屏
+         ================================================================= -->
+    <section id="screen-title" class="screen screen-title is-active" data-screen="title" aria-labelledby="game-title">
+      <header class="site-header">
+        <div class="brand">
+          <span class="brand-glyph" aria-hidden="true"><span></span></span>
+          <span class="brand-copy">
+            <strong>ORPHEUS<span class="brand-index">-9</span></strong>
+            <small>CAUSAL RESEARCH STATION</small>
+          </span>
+        </div>
+        <div class="header-status" aria-label="实验室状态">
+          <span class="live-dot" aria-hidden="true"></span>
+          <span>LOOP 4097</span>
+          <span class="header-rule" aria-hidden="true"></span>
+          <span class="muted">17 MINUTES SEALED</span>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="icon-btn" id="btn-sound-title" aria-label="切换声音" aria-pressed="true" title="切换声音 (M)">
+            <svg class="icon icon-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="sound-wave" d="M16 8.5a5 5 0 0 1 0 7M18.7 6a8.7 8.7 0 0 1 0 12"/></svg>
+            <svg class="icon icon-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="m16 9 5 6M21 9l-5 6"/></svg>
+          </button>
+          <button type="button" class="header-link" data-open="manual">操作手册</button>
+          <button type="button" class="header-link" data-open="settings">设置</button>
+        </div>
+      </header>
+
+      <main class="title-main">
+        <div class="title-copy">
+          <p class="eyebrow reveal-up">CHRONO PARADOX <span class="eyebrow-rule"></span> EPISODE 4097</p>
+          <h1 class="game-title reveal-up" id="game-title">
+            <span class="title-primary">时间悖论</span>
+            <span class="title-secondary"><span class="title-slash">/</span>失控实验室</span>
+          </h1>
+          <p class="title-lede reveal-up">过去的你，是现在唯一能相信的同伴。</p>
+          <p class="title-description reveal-up">一座困在 17 分钟里的深井实验室。一件能让你与自己并肩的因果装置。五个必须同时成立的重量点。你只有一次机会，让因果环闭合。</p>
+          <div class="title-actions reveal-up">
+            <button type="button" class="btn btn-primary btn-large" id="btn-start">
+              <span class="btn-label" id="btn-start-label">进入校准</span>
+              <span class="btn-meta" id="btn-start-meta">INITIATE LOOP</span>
+              <span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+            <button type="button" class="btn btn-ghost" id="btn-archive-title">
+              因果档案
+              <span class="btn-sub">ARCHIVE</span>
+            </button>
+          </div>
+          <div class="title-save reveal-up" id="title-save" aria-live="polite">
+            <span class="save-mark" aria-hidden="true"></span>
+            <span id="title-save-text">未检测到实验记录。校准协议等待启动。</span>
+          </div>
+          <div class="title-shortcuts reveal-up" aria-label="快捷操作">
+            <span><kbd>WASD</kbd> / <kbd>方向键</kbd> 移动</span>
+            <span><kbd>R</kbd> 回响</span>
+            <span><kbd>H</kbd> 手册</span>
+          </div>
+        </div>
+
+        <div class="title-observation reveal-fade">
+          <div class="obs-window">
+            <div class="obs-corner obs-corner--tl" aria-hidden="true"></div>
+            <div class="obs-corner obs-corner--tr" aria-hidden="true"></div>
+            <div class="obs-corner obs-corner--bl" aria-hidden="true"></div>
+            <div class="obs-corner obs-corner--br" aria-hidden="true"></div>
+            <div class="obs-topline">
+              <span><i class="live-dot live-dot--amber" aria-hidden="true"></i> LIVE OBSERVATION</span>
+              <span>REC <span class="rec-blink">●</span></span>
+            </div>
+            <canvas id="title-canvas" aria-label="因果核心观测图" role="img"></canvas>
+            <div class="obs-hud obs-hud--left" aria-hidden="true">
+              <span>TESSERACT / C-09</span>
+              <span>Δφ 0.0007</span>
+              <span>ANCHOR LOCKED</span>
+            </div>
+            <div class="obs-hud obs-hud--right" aria-hidden="true">
+              <span>4097 / ∞</span>
+              <span>17:00:00</span>
+              <span>CAUSALITY DRIFT</span>
+            </div>
+            <div class="obs-crosshair" aria-hidden="true">
+              <span></span><span></span><span></span><span></span>
+              <i></i>
+            </div>
+            <div class="obs-bottom">
+              <div>
+                <span class="micro-label">SUBJECT</span>
+                <strong>ANCHOR OBSERVER</strong>
+              </div>
+              <div class="obs-bottom-center">
+                <span class="micro-label">CORE TEMPERATURE</span>
+                <strong>−273.12 °C</strong>
+              </div>
+              <div>
+                <span class="micro-label">ECHO SIGNAL</span>
+                <strong class="signal-jade">3 / ACTIVE</strong>
+              </div>
+            </div>
+            <div class="obs-caption">
+              <span class="caption-line"></span>
+              <span>「时间不是线，是一枚正在回响的钟。」</span>
+            </div>
+          </div>
+          <div class="observation-footer">
+            <span>SUBTERRANEAN LAB · DEPTH 8,420 m</span>
+            <span>SPECIMEN: CAUSALITY</span>
+          </div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <span>ORPHEUS-9 / SECTOR ARCHIVE 01—08</span>
+        <span>单人解谜 · 键盘与触屏 · 约 25 分钟</span>
+        <span>ARIADNE CORE <span class="version">v4.12.7</span></span>
+      </footer>
+    </section>
+
+    <!-- =================================================================
+         开场档案
+         ================================================================= -->
+    <section id="screen-intro" class="screen screen-intro" data-screen="intro" aria-labelledby="intro-title" hidden>
+      <canvas id="intro-canvas" class="intro-canvas" aria-hidden="true"></canvas>
+      <div class="intro-scrim" aria-hidden="true"></div>
+      <header class="intro-header">
+        <div class="brand brand--small">
+          <span class="brand-glyph" aria-hidden="true"><span></span></span>
+          <span class="brand-copy"><strong>ORPHEUS<span class="brand-index">-9</span></strong><small>INCIDENT TRANSCRIPT</small></span>
+        </div>
+        <button type="button" class="text-btn" id="btn-skip-intro">跳过记录 <span aria-hidden="true">→</span></button>
+      </header>
+      <div class="intro-layout">
+        <div class="intro-copy">
+          <div class="intro-index" aria-hidden="true">
+            <span id="intro-step-num">01</span>
+            <span class="intro-index-rule"></span>
+            <span>03</span>
+          </div>
+          <p class="eyebrow" id="intro-kicker">档案 00 / 事故记录</p>
+          <h2 id="intro-title">在第 4097 次循环中醒来。</h2>
+          <p class="intro-body" id="intro-body">实验室已经沉默了 17 分钟。冷却管道不再震动，观测井底却传来规律的回声——像某种巨大的钟摆，一遍，又一遍。</p>
+          <blockquote class="intro-quote" id="intro-quote">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <span id="intro-quote-text">别相信第一层记忆。沿着回响走到核心室，我会在那里告诉你全部。</span>
+            <cite>— ARIADNE / 实验室智能</cite>
+          </blockquote>
+          <div class="intro-actions">
+            <button type="button" class="btn btn-primary" id="btn-intro-next">
+              <span id="btn-intro-next-label">继续</span><span class="btn-arrow" aria-hidden="true">→</span>
+            </button>
+            <div class="intro-progress" id="intro-progress" aria-label="档案进度">
+              <span class="is-active"></span><span></span><span></span>
+            </div>
+          </div>
+        </div>
+        <aside class="intro-aside" aria-label="实验室数据">
+          <div class="transmission-panel">
+            <div class="panel-head"><span>INCOMING TRANSMISSION</span><span class="live-dot" aria-hidden="true"></span></div>
+            <div class="waveform" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <dl class="data-list">
+              <div><dt>观测者</dt><dd>XU YAN / 许砚</dd></div>
+              <div><dt>锚点同步</dt><dd>97.4%</dd></div>
+              <div><dt>循环余量</dt><dd>1 / 4097</dd></div>
+              <div><dt>核心状态</dt><dd class="warn">UNSTABLE</dd></div>
+            </dl>
+          </div>
+          <p class="intro-footnote">按 <kbd>Enter</kbd> 继续 · 按 <kbd>Esc</kbd> 跳过记录</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         因果档案（关卡选择）
+         ================================================================= -->
+    <section id="screen-archive" class="screen screen-archive" data-screen="archive" aria-labelledby="archive-title" hidden>
+      <header class="site-header">
+        <button type="button" class="brand brand--button" data-action="go-title" aria-label="返回标题">
+          <span class="brand-glyph" aria-hidden="true"><span></span></span>
+          <span class="brand-copy"><strong>ORPHEUS<span class="brand-index">-9</span></strong><small>CAUSAL RESEARCH STATION</small></span>
+        </button>
+        <div class="breadcrumb"><span>ORPHEUS-9</span><span aria-hidden="true">/</span><span class="current">因果档案</span></div>
+        <div class="header-actions">
+          <button type="button" class="header-link" data-open="manual">操作手册</button>
+          <button type="button" class="header-link" data-open="settings">设置</button>
+          <button type="button" class="icon-btn" data-action="go-title" aria-label="返回标题">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+          </button>
+        </div>
+      </header>
+      <main class="archive-main">
+        <div class="archive-heading">
+          <div>
+            <p class="eyebrow">CAUSAL ARCHIVE <span class="eyebrow-rule"></span> 08 SECTORS</p>
+            <h2 id="archive-title">因果档案</h2>
+          </div>
+          <div class="archive-summary" aria-label="档案统计">
+            <div><span class="micro-label">稳定扇区</span><strong id="archive-completed">0 / 8</strong></div>
+            <div><span class="micro-label">记忆碎片</span><strong id="archive-shards">0 / 8</strong></div>
+            <div><span class="micro-label">已见结局</span><strong id="archive-endings">0 / 2</strong></div>
+          </div>
+        </div>
+        <div class="archive-layout">
+          <div class="archive-list" id="archive-list" role="list" aria-label="扇区列表"></div>
+          <aside class="archive-detail">
+            <div class="schematic-frame">
+              <div class="schematic-top"><span id="archive-map-label">SCHEMATIC / S-01</span><span>TOP VIEW</span></div>
+              <div class="map-schematic" id="archive-map" aria-hidden="true"></div>
+              <div class="schematic-scan" aria-hidden="true"></div>
+            </div>
+            <div class="archive-copy">
+              <p class="eyebrow" id="archive-code">SECTOR 01 / CALIBRATION</p>
+              <h3 id="archive-name">校准室</h3>
+              <p class="archive-epithet" id="archive-epithet">让过去的你，替你按住开关。</p>
+              <p class="archive-objective" id="archive-objective">抵达观测站出口，并尽可能回收记忆碎片。</p>
+              <div class="archive-meta">
+                <div><span class="micro-label">回响上限</span><strong id="archive-echo">1</strong></div>
+                <div><span class="micro-label">最佳行动</span><strong id="archive-best">—</strong></div>
+                <div><span class="micro-label">评价</span><strong id="archive-stars">☆☆☆</strong></div>
+              </div>
+              <button type="button" class="btn btn-primary" id="btn-archive-enter">
+                进入扇区 <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
+            </div>
+          </aside>
+        </div>
+        <div class="archive-shelf">
+          <div class="shelf-heading">
+            <div>
+              <span class="micro-label">MEMORY RESIDUE</span>
+              <strong>记忆碎片</strong>
+            </div>
+            <button type="button" class="text-btn" id="btn-open-memory">打开记忆库 <span aria-hidden="true">→</span></button>
+          </div>
+          <div class="shelf-items" id="memory-shelf" aria-label="已回收的记忆碎片"></div>
+        </div>
+      </main>
+      <div class="archive-mobile-action" id="archive-mobile-action">
+        <div>
+          <span class="micro-label" id="archive-mobile-code">SECTOR 04 / STILL ROOM</span>
+          <strong id="archive-mobile-name">静默间</strong>
+        </div>
+        <button type="button" class="btn btn-primary" id="btn-archive-mobile-enter">进入扇区 <span class="btn-arrow" aria-hidden="true">→</span></button>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         游戏主屏
+         ================================================================= -->
+    <section id="screen-game" class="screen screen-game" data-screen="game" aria-labelledby="game-screen-title" hidden>
+      <header class="game-header">
+        <div class="game-header-left">
+          <button type="button" class="icon-btn" id="btn-game-back" aria-label="返回因果档案" title="返回档案">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg>
+          </button>
+          <div class="game-brand">
+            <span class="brand-glyph brand-glyph--small" aria-hidden="true"><span></span></span>
+            <span class="game-brand-copy">ORPHEUS-9 <em>CAUSAL CHAMBER</em></span>
+          </div>
+        </div>
+        <div class="game-sector-title" id="game-screen-title">
+          <span id="game-sector-code">SECTOR 01</span>
+          <strong id="game-sector-name">校准室</strong>
+          <em id="game-sector-en">CALIBRATION</em>
+        </div>
+        <div class="game-header-right">
+          <div class="chip-row" aria-label="关卡状态">
+            <span class="chip chip--loop"><span>LOOP</span><strong id="chip-loop">01</strong></span>
+            <span class="chip chip--echo"><span>CHARGE</span><strong id="chip-echo">2</strong></span>
+            <span class="chip chip--shard" id="chip-shard" title="记忆碎片"><span aria-hidden="true">◇</span><strong id="chip-shard-text">0</strong></span>
+          </div>
+          <button type="button" class="icon-btn" id="btn-game-sound" aria-label="切换声音" aria-pressed="true">
+            <svg class="icon icon-sound" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path class="sound-wave" d="M16 8.5a5 5 0 0 1 0 7M18.7 6a8.7 8.7 0 0 1 0 12"/></svg>
+            <svg class="icon icon-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="m16 9 5 6M21 9l-5 6"/></svg>
+          </button>
+          <button type="button" class="icon-btn" id="btn-game-help" aria-label="打开操作手册" title="操作手册 (H)">
+            <span class="question-mark">?</span>
+          </button>
+          <button type="button" class="icon-btn" id="btn-pause" aria-label="暂停" title="暂停 (Esc)">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="compact-mission" id="compact-mission">
+        <div class="compact-objective">
+          <span class="micro-label">OBJECTIVE</span>
+          <strong id="compact-objective-text">抵达观测站出口</strong>
+        </div>
+        <button type="button" class="text-btn" id="btn-compact-hint">提示 <span class="hint-count" id="compact-hint-count">1/3</span></button>
+      </div>
+
+      <main class="game-shell">
+        <aside class="rail rail-left" aria-label="任务档案">
+          <div class="rail-scroll">
+            <div class="sector-heading">
+              <p class="eyebrow" id="rail-code">SECTOR 01 / CALIBRATION</p>
+              <h2 id="rail-name">校准室</h2>
+              <p class="rail-epithet" id="rail-epithet">让过去的你，替你按住开关。</p>
+            </div>
+            <div class="rail-section objective-block">
+              <span class="micro-label">PRIMARY OBJECTIVE / 任务</span>
+              <p id="rail-objective">抵达观测站出口，并尽可能回收记忆碎片。</p>
+            </div>
+            <div class="rail-section transmission-block">
+              <div class="transmission-head">
+                <span class="transmission-avatar" aria-hidden="true">A</span>
+                <span><strong>ARIADNE</strong><small>TRANSMISSION / INCOMING</small></span>
+                <span class="live-dot" aria-hidden="true"></span>
+              </div>
+              <p id="rail-ariadne">这里的压力板需要持续的重量。但你已经没有第二个身体了。或者，你可以制造一个。</p>
+            </div>
+            <div class="rail-section mechanic-block">
+              <span class="micro-label">MECHANIC / 本区机制</span>
+              <p id="rail-mechanic">回响 / ECHO — 按 R 倒带本循环，把刚刚的行动刻录成一个有重量的回响。</p>
+            </div>
+            <div class="rail-section hint-block">
+              <div class="hint-head">
+                <span class="micro-label">ARIADNE HINT</span>
+                <span class="hint-dots" id="hint-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              </div>
+              <p class="hint-text" id="rail-hint">还在观察。需要一点方向时，按 H 或点击「提示」。</p>
+              <button type="button" class="btn btn-inline" id="btn-hint">请求提示 <kbd>H</kbd></button>
+            </div>
+            <div class="rail-section shard-block">
+              <div class="shard-line">
+                <span class="shard-glyph" aria-hidden="true">◇</span>
+                <div><span class="micro-label">MEMORY SHARD / 记忆碎片</span><strong id="rail-shard-state">未回收</strong></div>
+              </div>
+              <p>倒带会重置碎片。只有在本轮循环中带着它抵达出口，才会被记入档案。</p>
+            </div>
+            <button type="button" class="rail-manual-link" data-open="manual">查看完整因果操作手册 <span aria-hidden="true">→</span></button>
+          </div>
+        </aside>
+
+        <section class="stage-column" aria-label="解谜舞台">
+          <div class="stage-frame" id="stage-frame">
+            <div class="stage-topline">
+              <div><span class="stage-coord" id="stage-coord">CHAMBER / C-01</span><span class="stage-sep" aria-hidden="true"></span><span id="stage-mode">SINGLE LOOP</span></div>
+              <div class="stage-status"><span class="stage-status-dot" aria-hidden="true"></span><span id="stage-status">OBSERVING</span><span class="stage-sync" id="stage-sync"></span></div>
+            </div>
+            <canvas id="game-canvas" tabindex="0" aria-label="因果棋盘。使用方向键或 WASD 移动，空格等待，R 回响。" aria-roledescription="网格解谜棋盘" role="application"></canvas>
+            <div class="stage-scanlines" aria-hidden="true"></div>
+            <div class="stage-vignette" aria-hidden="true"></div>
+            <div class="stage-annotation stage-annotation--left" aria-hidden="true"><span>ΔT</span><strong id="stage-delta">−00.00</strong></div>
+            <div class="stage-annotation stage-annotation--right" aria-hidden="true"><span>TICKS</span><strong id="stage-ticks">000</strong></div>
+            <div class="stage-curtain" id="level-curtain" hidden>
+              <div class="curtain-glyph" id="curtain-glyph" aria-hidden="true"></div>
+              <p class="eyebrow" id="curtain-code">SECTOR 01 / CALIBRATION</p>
+              <h3 id="curtain-name">校准室</h3>
+              <p id="curtain-epithet">让过去的你，替你按住开关。</p>
+              <div class="curtain-loader" aria-hidden="true"><i></i></div>
+            </div>
+            <div class="tile-inspector" id="tile-inspector" hidden>
+              <span id="inspector-coord">C-04</span>
+              <strong id="inspector-name">压力板 A</strong>
+              <p id="inspector-desc">任一实体站在上面时，A 门开启。</p>
+            </div>
+          </div>
+
+          <div class="mobile-monitor" id="mobile-monitor" role="region" aria-label="因果监控">
+            <div class="mm-head">
+              <span class="micro-label">CAUSALITY MONITOR</span>
+              <span class="mm-live"><i class="live-dot" aria-hidden="true"></i> LIVE</span>
+            </div>
+            <div class="mm-stats">
+              <div><span class="micro-label">LOOP</span><strong id="mm-loop">01</strong></div>
+              <div><span class="micro-label">ACTIONS</span><strong id="mm-actions">0</strong></div>
+              <div><span class="micro-label">ECHOES</span><strong id="mm-echoes">0</strong></div>
+            </div>
+            <div class="mm-energy-row">
+              <span class="micro-label">ECHO CHARGE</span>
+              <div class="energy-segments" id="mm-energy"></div>
+              <strong id="mm-energy-text" class="mm-energy-value">1 / 1</strong>
+            </div>
+            <div class="mm-sync" id="mm-sync" hidden>
+              <span class="micro-label">SYNC NODES</span>
+              <div class="sync-pips" id="mm-sync-pips"></div>
+              <strong id="mm-sync-count">0 / 3</strong>
+            </div>
+            <div class="mm-roster" id="mm-roster"></div>
+            <ol class="mm-log" id="mm-log"></ol>
+            <div class="mm-foot">
+              <p class="mm-note" id="mm-note"></p>
+              <span class="mm-shard" id="mm-shard"><span aria-hidden="true">◇</span> MEMORY / 未回收</span>
+            </div>
+          </div>
+
+          <div class="command-dock">
+            <div class="command-main desktop-controls">
+              <button type="button" class="cmd-btn" id="btn-undo" aria-label="撤销一步 (Z)" title="撤销一步 (Z)">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5"/><path d="M4 12h9a6 6 0 0 1 6 6v1"/></svg>
+                <span>撤销</span><kbd>Z</kbd>
+              </button>
+              <button type="button" class="cmd-btn" id="btn-wait" aria-label="等待一拍 (空格)" title="等待一拍 (空格)">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg>
+                <span>等待</span><kbd>SPACE</kbd>
+              </button>
+              <button type="button" class="cmd-btn" id="btn-reset" aria-label="重置本扇区" title="重置本扇区">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v6h6"/><path d="M4.5 10a8 8 0 1 0 2.1-4.5"/></svg>
+                <span>重置</span>
+              </button>
+            </div>
+            <div class="rewind-block">
+              <div class="charge-label">
+                <span class="micro-label">ECHO CHARGE / 余响</span>
+                <span id="charge-text">1 / 1</span>
+              </div>
+              <div class="charge-pips" id="charge-pips" aria-hidden="true"></div>
+              <button type="button" class="btn-rewind" id="btn-rewind" aria-label="回响：倒带本循环 (R)" title="回响 (R)">
+                <span class="rewind-ring" aria-hidden="true"></span>
+                <span class="rewind-copy"><strong>回响</strong><small>REWIND</small></span>
+                <kbd>R</kbd>
+              </button>
+            </div>
+            <div class="touch-controls" id="touch-controls" aria-label="触屏控制">
+              <div class="dpad" aria-label="方向">
+                <button type="button" class="dpad-btn dpad-up" data-dir="up" aria-label="向上移动">↑</button>
+                <div class="dpad-middle">
+                  <button type="button" class="dpad-btn" data-dir="left" aria-label="向左移动">←</button>
+                  <button type="button" class="dpad-btn dpad-wait" data-action="wait" aria-label="等待">等</button>
+                  <button type="button" class="dpad-btn" data-dir="right" aria-label="向右移动">→</button>
+                </div>
+                <button type="button" class="dpad-btn dpad-down" data-dir="down" aria-label="向下移动">↓</button>
+              </div>
+              <div class="touch-actions">
+                <button type="button" class="touch-mini" data-action="undo" aria-label="撤销一步">撤销</button>
+                <button type="button" class="touch-rewind" data-action="rewind" aria-label="回响，倒带本循环"><span>回响</span><small id="touch-charge">1</small></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="rail rail-right" aria-label="因果监控">
+          <div class="rail-scroll">
+            <div class="monitor-heading">
+              <span class="micro-label">CAUSALITY MONITOR</span>
+              <span class="monitor-live"><i class="live-dot" aria-hidden="true"></i> LIVE</span>
+            </div>
+            <div class="monitor-readout">
+              <div class="readout-loop">
+                <span class="micro-label">CURRENT LOOP</span>
+                <strong id="monitor-loop">01</strong>
+                <small>次循环</small>
+              </div>
+              <div class="readout-grid">
+                <div><span class="micro-label">ACTIONS</span><strong id="monitor-actions">0</strong></div>
+                <div><span class="micro-label">ECHOES</span><strong id="monitor-echoes">0</strong></div>
+              </div>
+            </div>
+            <div class="monitor-energy">
+              <div class="monitor-energy-head"><span class="micro-label">ECHO CHARGE / 余响</span><strong id="monitor-energy-text">1 / 1</strong></div>
+              <div class="energy-segments" id="monitor-energy"></div>
+            </div>
+            <div class="monitor-section sync-monitor" id="sync-monitor" hidden>
+              <div class="section-head"><span>SYNC NODES</span><span id="sync-count">0 / 3</span></div>
+              <div class="sync-pips" id="sync-pips"></div>
+              <p class="sync-hint" id="sync-hint">所有节点必须同时被占据。</p>
+            </div>
+            <div class="monitor-section">
+              <div class="section-head"><span>ECHO ROSTER / 回响名录</span><span id="echo-roster-count">00</span></div>
+              <div class="echo-roster" id="echo-roster">
+                <div class="roster-empty">尚无回响。按 <kbd>R</kbd> 刻录本轮。</div>
+              </div>
+            </div>
+            <div class="monitor-section">
+              <div class="section-head"><span>CAUSAL LOG / 因果记录</span><span class="log-live-dot" aria-hidden="true"></span></div>
+              <ol class="causal-log" id="causal-log">
+                <li class="log-empty">等待第一次时间刻度。</li>
+              </ol>
+            </div>
+            <div class="monitor-controls">
+              <span class="micro-label">CONTROLS</span>
+              <dl>
+                <div><dt>移动</dt><dd><kbd>WASD</kbd> / <kbd>方向键</kbd></dd></div>
+                <div><dt>等待</dt><dd><kbd>SPACE</kbd></dd></div>
+                <div><dt>回响</dt><dd><kbd>R</kbd></dd></div>
+                <div><dt>撤销</dt><dd><kbd>Z</kbd></dd></div>
+                <div><dt>暂停</dt><dd><kbd>ESC</kbd></dd></div>
+              </dl>
+            </div>
+          </div>
+        </aside>
+      </main>
+      <div class="visually-hidden" id="game-live" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <!-- =================================================================
+         结局
+         ================================================================= -->
+    <section id="screen-ending" class="screen screen-ending" data-screen="ending" aria-labelledby="ending-title" hidden>
+      <canvas id="ending-canvas" class="ending-canvas" aria-hidden="true"></canvas>
+      <div class="ending-scrim" aria-hidden="true"></div>
+      <header class="ending-header">
+        <div class="brand brand--small">
+          <span class="brand-glyph" aria-hidden="true"><span></span></span>
+          <span class="brand-copy"><strong>ORPHEUS<span class="brand-index">-9</span></strong><small>FINAL TRANSMISSION</small></span>
+        </div>
+        <span class="ending-file">CORE ACCESS / 0x00FF</span>
+      </header>
+      <main class="ending-main">
+        <div class="ending-intro" id="ending-intro">
+          <p class="eyebrow">FINAL RECORD <span class="eyebrow-rule"></span> ARIADNE</p>
+          <h2 id="ending-title">你走到了最后一次循环。</h2>
+          <div class="ending-dialogue" id="ending-dialogue"></div>
+          <p class="ending-prompt">你要让哪一个「现在」成为真实？</p>
+          <p class="ending-choice-warning">选择不可撤销 · 点击任一卡片即确认 · 两个结局会分别记入因果档案。</p>
+          <div class="ending-choices" id="ending-choices">
+            <button type="button" class="ending-choice" data-ending="close">
+              <span class="choice-index">A</span>
+              <span class="choice-copy">
+                <strong>闭合因果环</strong>
+                <em>BECOME THE ANCHOR</em>
+                <span>以自己为锚，终止 4097 次循环。实验室会安全，所有回响会消失；你将成为 ARIADNE 记忆里最后一个被保存的人。</span>
+              </span>
+              <span class="choice-arrow" aria-hidden="true">→</span>
+            </button>
+            <button type="button" class="ending-choice" data-ending="break">
+              <span class="choice-index">B</span>
+              <span class="choice-copy">
+                <strong>越出因果</strong>
+                <em>STEP OUTSIDE</em>
+                <span>把五个节点的因果债一次性释放，打穿闭环。你将失去 ARIADNE 的庇护和所有被找回的记忆，但未来不再保证重演。</span>
+              </span>
+              <span class="choice-arrow" aria-hidden="true">→</span>
+            </button>
+          </div>
+        </div>
+        <div class="ending-epilogue" id="ending-epilogue" hidden>
+          <p class="eyebrow" id="epilogue-code">ENDING A / CLOSED LOOP</p>
+          <h2 id="epilogue-title">让钟停在十七分零一秒。</h2>
+          <div class="epilogue-body" id="epilogue-body"></div>
+          <div class="epilogue-stats">
+            <div><span class="micro-label">FINAL LOOP</span><strong>4097</strong></div>
+            <div><span class="micro-label">ECHOES RELEASED</span><strong id="epilogue-echoes">—</strong></div>
+            <div><span class="micro-label">ENDING</span><strong id="epilogue-ending">A / 2</strong></div>
+          </div>
+          <div class="epilogue-actions">
+            <button type="button" class="btn btn-primary" data-action="go-title">回到标题 <span class="btn-arrow" aria-hidden="true">→</span></button>
+            <button type="button" class="btn btn-ghost" data-action="go-archive">查看因果档案</button>
+          </div>
+        </div>
+      </main>
+      <footer class="ending-footer">
+        <span>ORPHEUS-9 / CAUSALITY CORE</span>
+        <span id="ending-footer-quote">「不是所有回声都需要被听见。」</span>
+      </footer>
+    </section>
+  </div>
+
+  <!-- ===================================================================
+       对话框
+       =================================================================== -->
+  <dialog class="dialog dialog-manual" id="dialog-manual" aria-labelledby="manual-title">
+    <div class="dialog-bar">
+      <span class="eyebrow">FIELD MANUAL / ORPHEUS-9</span>
+      <button type="button" class="icon-btn dialog-close" data-close-dialog aria-label="关闭手册">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="dialog-scroll">
+      <header class="dialog-heading">
+        <p class="eyebrow">因果操作手册</p>
+        <h2 id="manual-title">如何与过去的自己合作</h2>
+        <p class="dialog-lede">在这座实验室里，时间不是资源，而是可以被借助的另一个身体。以下规则在全部扇区中保持不变。</p>
+      </header>
+      <div class="manual-layout">
+        <section class="manual-block manual-block--wide">
+          <span class="manual-index">01</span>
+          <h3>基本行动</h3>
+          <p>每次移动、推箱或等待都消耗一个时间刻度。撞墙和撞上关闭的门不会消耗刻度。抵达发光的出口传送门即完成扇区。</p>
+          <div class="key-guide">
+            <span><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动</span>
+            <span><kbd>Space</kbd> 等待一拍</span>
+            <span><kbd>R</kbd> 回响</span>
+            <span><kbd>Z</kbd> 撤销一步</span>
+          </div>
+        </section>
+        <section class="manual-block manual-block--wide">
+          <span class="manual-index">02</span>
+          <h3>回响 / ECHO</h3>
+          <p>按 <kbd>R</kbd> 将当前循环倒带，并把本轮你执行的每个动作刻录成一个新的回响。下一轮开始后，所有回响会在同一刻度重演各自记录的动作。</p>
+          <div class="manual-figures">
+            <div class="figure-item"><span class="mini-tile mini-player" aria-hidden="true"></span><span><strong>你</strong><small>真实，能拾取碎片</small></span></div>
+            <div class="figure-item"><span class="mini-tile mini-echo" aria-hidden="true"></span><span><strong>回响</strong><small>可压板、推箱、触发封印</small></span></div>
+            <div class="figure-item"><span class="mini-tile mini-tick" aria-hidden="true">01</span><span><strong>同步刻度</strong><small>回响重演第 N 个动作</small></span></div>
+          </div>
+          <p class="manual-note">按空格等待，可以让回响先行动。回响不能被玩家杀死，也不会拾取记忆碎片。每次回响消耗一枚余响能量。</p>
+        </section>
+        <section class="manual-block">
+          <span class="manual-index">03</span>
+          <h3>因果锚 / ANCHOR</h3>
+          <p>紫铜色箱体在倒带时保留当前位置。它的未来会覆盖过去。把锚箱推到压力板或质量槽上，再回响，下一轮的起点条件就被改写。</p>
+          <div class="mini-inline"><span class="mini-tile mini-anchor" aria-hidden="true">锚</span><span class="mini-arrow">→</span><span class="mini-tile mini-sync-square" aria-hidden="true">1</span></div>
+        </section>
+        <section class="manual-block">
+          <span class="manual-index">04</span>
+          <h3>压力板与门</h3>
+          <p>琥珀色 A 系、青色 B 系压力板需要任意实体持续压住。松开后门立即关闭。让回响留在板上，是走到门另一侧的基本方法。</p>
+          <div class="mini-inline"><span class="mini-tile mini-plate-a" aria-hidden="true">A</span><span class="mini-signal"></span><span class="mini-tile mini-door" aria-hidden="true">A</span></div>
+        </section>
+        <section class="manual-block">
+          <span class="manual-index">05</span>
+          <h3>因果封印 / SEAL</h3>
+          <p>出现裂纹的 <strong>V</strong> 闸初始开启。任意实体踏上封印触发器 <strong>v</strong> 后，V 会在本循环剩余时间内永久关闭。它只能通过一次——这不是陷阱，而是因果的定价。</p>
+          <div class="mini-inline"><span class="mini-tile mini-seal" aria-hidden="true">v</span><span class="mini-arrow">⇥</span><span class="mini-tile mini-seal-door" aria-hidden="true">V</span></div>
+        </section>
+        <section class="manual-block">
+          <span class="manual-index">06</span>
+          <h3>同步节点 / SYNC</h3>
+          <p>所有同步节点必须在同一时刻被占据，中央同步门才会永久开启。圆形节点接受任何实体；方形质量槽只接受箱子。同步一旦成立，离开节点也不会关闭门。</p>
+          <div class="manual-figures manual-figures--three">
+            <div class="figure-item"><span class="mini-tile mini-sync" aria-hidden="true">1</span><span><strong>节点</strong><small>玩家 / 回响 / 箱子</small></span></div>
+            <div class="figure-item"><span class="mini-tile mini-sync-square" aria-hidden="true">2</span><span><strong>质量槽</strong><small>只接受箱子</small></span></div>
+            <div class="figure-item"><span class="mini-tile mini-sync-gate" aria-hidden="true">G</span><span><strong>同步门</strong><small>同步后永久开启</small></span></div>
+          </div>
+        </section>
+        <section class="manual-block">
+          <span class="manual-index">07</span>
+          <h3>记忆碎片与评价</h3>
+          <p>每区有一枚记忆碎片。倒带会重置它；只有在本轮携带它抵达出口才会记入档案。评价由三颗星组成：完成扇区 / 回收碎片 / 总行动刻度不超过 PAR。</p>
+          <div class="star-demo" aria-label="三颗星"><span>★</span><span>★</span><span>★</span></div>
+        </section>
+      </div>
+    </div>
+    <div class="dialog-foot">
+      <span>提示：按 <kbd>Esc</kbd> 关闭。游戏不会因为你犯错而结束。</span>
+      <button type="button" class="btn btn-small" data-close-dialog>返回实验</button>
+    </div>
+  </dialog>
+
+  <dialog class="dialog dialog-settings" id="dialog-settings" aria-labelledby="settings-title">
+    <div class="dialog-bar">
+      <span class="eyebrow">SYSTEM / CALIBRATION</span>
+      <button type="button" class="icon-btn dialog-close" data-close-dialog aria-label="关闭设置">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="dialog-scroll">
+      <header class="dialog-heading">
+        <p class="eyebrow">设置</p>
+        <h2 id="settings-title">实验参数</h2>
+      </header>
+      <div class="settings-list">
+        <div class="setting-row">
+          <div><strong>声音</strong><span>实验室底噪、机械反馈与因果提示音。</span></div>
+          <button type="button" class="switch" id="setting-sound" role="switch" aria-checked="true" aria-label="声音开关"><span></span></button>
+        </div>
+        <div class="setting-row">
+          <div><strong>减少动态效果</strong><span>关闭粒子、屏幕震动与长时间的倒带动画。系统偏好会自动启用。</span></div>
+          <button type="button" class="switch" id="setting-motion" role="switch" aria-checked="false" aria-label="减少动态效果"><span></span></button>
+        </div>
+        <div class="setting-row">
+          <div><strong>显示审计状态</strong><span>在页脚标记开发级日志是否已上报到本地 logs/。不影响游戏。</span></div>
+          <button type="button" class="switch" id="setting-audit" role="switch" aria-checked="false" aria-label="显示审计状态"><span></span></button>
+        </div>
+      </div>
+      <div class="danger-zone">
+        <div><strong>清除实验记录</strong><span>删除本机保存的解锁进度、评价、记忆碎片与结局。此操作不可恢复。</span></div>
+        <button type="button" class="btn btn-danger btn-small" id="btn-reset-progress">清除进度</button>
+      </div>
+      <div class="settings-meta">
+        <span>版本 1.0.0</span>
+        <span>存档位置：浏览器本地存储</span>
+        <span id="audit-status">AUDIT / 前端日志准备中</span>
+      </div>
+    </div>
+    <div class="dialog-foot">
+      <span>设置会自动保存。</span>
+      <button type="button" class="btn btn-small" data-close-dialog>关闭</button>
+    </div>
+  </dialog>
+
+  <dialog class="dialog dialog-pause" id="dialog-pause" aria-labelledby="pause-title">
+    <div class="dialog-bar">
+      <span class="eyebrow">SYSTEM PAUSE / LOOP SUSPENDED</span>
+      <button type="button" class="icon-btn dialog-close" data-close-dialog aria-label="继续">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="pause-body">
+      <p class="eyebrow" id="pause-sector">SECTOR 01 / CALIBRATION</p>
+      <h2 id="pause-title">时间已暂停</h2>
+      <p class="pause-note">循环不会因为你停下来而前进。准备好之后，再让现在继续。</p>
+      <div class="pause-actions">
+        <button type="button" class="btn btn-primary" id="btn-resume">继续实验 <span class="btn-arrow" aria-hidden="true">→</span></button>
+        <button type="button" class="btn btn-ghost" id="btn-restart">重置本扇区</button>
+        <button type="button" class="btn btn-quiet" data-open="manual">操作手册</button>
+        <button type="button" class="btn btn-quiet" data-open="settings">设置</button>
+      </div>
+      <button type="button" class="text-btn pause-exit" id="btn-pause-archive">退出到因果档案</button>
+    </div>
+  </dialog>
+
+  <dialog class="dialog dialog-confirm" id="dialog-reset" aria-labelledby="reset-title">
+    <div class="dialog-bar">
+      <span class="eyebrow">CONFIRM / RESET SECTOR</span>
+      <button type="button" class="icon-btn dialog-close" data-close-dialog aria-label="取消">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="confirm-body">
+      <h2 id="reset-title">重置本扇区？</h2>
+      <p id="reset-copy">本轮的进度、回响与因果锚位置都会被清空。关卡评价记录不会被删除。</p>
+      <div class="confirm-actions">
+        <button type="button" class="btn btn-ghost" data-close-dialog>保留当前进度</button>
+        <button type="button" class="btn btn-danger" id="btn-confirm-reset">确认重置</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class="dialog dialog-result" id="dialog-result" aria-labelledby="result-title">
+    <div class="result-top">
+      <span class="eyebrow" id="result-kicker">SECTOR 01 / STABILIZED</span>
+      <span class="result-seal" id="result-seal" aria-hidden="true">◈</span>
+    </div>
+    <div class="result-body">
+      <p class="eyebrow" id="result-subtitle">CAUSAL LOOP CLOSED</p>
+      <h2 id="result-title">扇区已稳定</h2>
+      <p class="result-epithet" id="result-epithet"></p>
+      <div class="result-stars" id="result-stars" aria-label="本关评价"></div>
+      <div class="result-stats" id="result-stats"></div>
+      <div class="result-shard" id="result-shard" hidden>
+        <span class="result-shard-glyph" aria-hidden="true">◇</span>
+        <div><span class="micro-label" id="result-shard-title">MEMORY RECOVERED</span><p id="result-shard-body"></p></div>
+      </div>
+      <div class="result-actions" id="result-actions"></div>
+      <p class="result-note" id="result-note">进度已保存到本地实验记录。</p>
+    </div>
+  </dialog>
+
+  <dialog class="dialog dialog-memory" id="dialog-memory" aria-labelledby="memory-title">
+    <div class="dialog-bar">
+      <span class="eyebrow">MEMORY RESIDUE / RECOVERED</span>
+      <button type="button" class="icon-btn dialog-close" data-close-dialog aria-label="关闭记忆库">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="dialog-scroll">
+      <header class="dialog-heading">
+        <p class="eyebrow">记忆库</p>
+        <h2 id="memory-title">被找回的碎片</h2>
+        <p class="dialog-lede" id="memory-lede">尚未回收任何记忆碎片。前往扇区，找到那些仍记得事故的晶体。</p>
+      </header>
+      <div class="memory-list" id="memory-list"></div>
+    </div>
+    <div class="dialog-foot">
+      <span>记忆碎片只保存本机记录，不会同步到任何服务器。</span>
+      <button type="button" class="btn btn-small" data-close-dialog>关闭</button>
+    </div>
+  </dialog>
+
+  <div class="toast-root" id="toast-root" aria-live="polite" aria-atomic="false"></div>
+  <div class="audit-marker" id="audit-marker" hidden>DEV AUDIT <span id="audit-marker-detail">LOCAL</span></div>
+  <noscript><div class="noscript">本游戏需要启用 JavaScript 才能运行因果引擎。</div></noscript>
+
+  <script src="js/logger.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/levels.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

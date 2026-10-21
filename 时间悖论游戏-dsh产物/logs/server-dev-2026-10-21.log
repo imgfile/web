@@ -1,0 +1,503 @@
+[服务启动] 时间=2026-10-20T18:45:48.145Z 地址=http://127.0.0.1:4173/ 日志目录=C:\Users\root\AppData\Local\Temp\chrono-paradox-lab\logs
+[请求到达] traceId=httpreq-mvh1alfl-8e54d3 入口=GET /?isolated=audit-final-run 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1alfl-8e54d3 入口=GET /?isolated=audit-final-run 状态码=200 响应数据=静态文件 index.html (47051 bytes) 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1alfz-3bd1ee 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1alfz-3bd1ee 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (90257 bytes) 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1alg1-b4452f 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1alg1-abc060 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[请求到达] traceId=httpreq-mvh1alg1-a449ed 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1alg1-bcf38e 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[响应返回] traceId=httpreq-mvh1alg1-abc060 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1alg1-b4452f 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1alg3-dca492 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1alg1-bcf38e 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1alg3-bc6369 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[响应返回] traceId=httpreq-mvh1alg1-a449ed 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15696 bytes) 耗时=3ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1alg3-bc6369 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (83863 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1alg3-dca492 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (125147 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1aliw-b12ca7 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[请求到达] traceId=httpreq-mvh1aliw-0d0608 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1aliw-0d0608 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=1ms 最终业务结果=成功
+[业务入口] traceId=httpreq-mvh1aliw-b12ca7 step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1alix-195ffc
+[响应返回] traceId=httpreq-mvh1aliw-b12ca7 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1alzl-f08d7c 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1alzl-f08d7c step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1alzm-3fe708
+[响应返回] traceId=httpreq-mvh1alzl-f08d7c 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1an4f-2d4c8d 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1an4f-2d4c8d step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1an4f-384e09
+[响应返回] traceId=httpreq-mvh1an4f-2d4c8d 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1an9w-c320bc 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1an9w-c320bc step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=2条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1an9w-f95cd9
+[响应返回] traceId=httpreq-mvh1an9w-c320bc 入口=POST /api/logs/report 状态码=200 响应数据=收到 2 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1aokc-a947ce 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1aokc-a947ce step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1aokc-8d08c1
+[响应返回] traceId=httpreq-mvh1aokc-a947ce 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1aonu-3dc5a1 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1aonu-3dc5a1 step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1aonv-18f96f
+[响应返回] traceId=httpreq-mvh1aonu-3dc5a1 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1aovm-e46928 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1aovm-e46928 step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1aovm-27649f
+[响应返回] traceId=httpreq-mvh1aovm-e46928 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=6ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1aoxd-fcd23e 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1aoxd-fcd23e step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=5条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1aoxd-825e6b
+[响应返回] traceId=httpreq-mvh1aoxd-fcd23e 入口=POST /api/logs/report 状态码=200 响应数据=收到 5 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1ap3e-522eec 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1ap3e-522eec step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1ap3e-4a5c8b
+[响应返回] traceId=httpreq-mvh1ap3e-522eec 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1apfv-5a7578 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1apfv-5a7578 step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=5条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1apfw-dc78ba
+[响应返回] traceId=httpreq-mvh1apfv-5a7578 入口=POST /api/logs/report 状态码=200 响应数据=收到 5 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1aqa7-145d5a 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1aqa7-145d5a step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1aqa8-6b7f9f
+[响应返回] traceId=httpreq-mvh1aqa7-145d5a 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1aqcb-e3d571 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1aqcb-e3d571 step=写入前端审计日志 客户端session=session-mvh1alg7-0yrl9q6a 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1aqcb-725b55
+[响应返回] traceId=httpreq-mvh1aqcb-e3d571 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bnb9-6cf4c6 入口=GET /?isolated=all-levels-render 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1bnb9-6cf4c6 入口=GET /?isolated=all-levels-render 状态码=200 响应数据=静态文件 index.html (47051 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bnbo-db6084 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1bnbo-db6084 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (90257 bytes) 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bnbq-5ec4a7 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1bnbq-9c9da1 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1bnbq-cb61f0 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[请求到达] traceId=httpreq-mvh1bnbq-e4a8c7 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[响应返回] traceId=httpreq-mvh1bnbq-5ec4a7 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1bnbq-cb61f0 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1bnbq-9c9da1 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15696 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1bnbq-e4a8c7 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bnbr-2240bb 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1bnbr-1e5835 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1bnbr-2240bb 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (83863 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1bnbr-1e5835 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (125147 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bnek-7a80f7 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1bnek-7a80f7 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bnel-bae786 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1bnel-bae786 step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1bnem-17bbac
+[响应返回] traceId=httpreq-mvh1bnel-bae786 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bnvf-49da9b 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1bnvf-49da9b step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1bnvg-f3de5e
+[响应返回] traceId=httpreq-mvh1bnvf-49da9b 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1boca-b0c706 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1boca-b0c706 step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=5条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1bocb-ce73b1
+[响应返回] traceId=httpreq-mvh1boca-b0c706 入口=POST /api/logs/report 状态码=200 响应数据=收到 5 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bp3f-5d2fb6 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1bp3f-5d2fb6 step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1bp3f-8d6035
+[响应返回] traceId=httpreq-mvh1bp3f-5d2fb6 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bpsv-c931dc 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1bpsv-c931dc step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1bpsw-1dd4c4
+[响应返回] traceId=httpreq-mvh1bpsv-c931dc 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bqi2-5d0eaa 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1bqi2-5d0eaa step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1bqi3-c35211
+[响应返回] traceId=httpreq-mvh1bqi2-5d0eaa 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1br75-1342a5 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1br75-1342a5 step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1br76-8253ac
+[响应返回] traceId=httpreq-mvh1br75-1342a5 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1brwa-0d78b8 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1brwa-0d78b8 step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1brwa-eea44f
+[响应返回] traceId=httpreq-mvh1brwa-0d78b8 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1bslb-d01591 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1bslb-d01591 step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1bslc-6bab8b
+[响应返回] traceId=httpreq-mvh1bslb-d01591 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1btag-76a1b7 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1btag-76a1b7 step=写入前端审计日志 客户端session=session-mvh1bnef-7tlnrqjw 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1btah-70a7bc
+[响应返回] traceId=httpreq-mvh1btag-76a1b7 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dqgq-10c386 入口=GET /?isolated=post-cleanup-smoke 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1dqgq-10c386 入口=GET /?isolated=post-cleanup-smoke 状态码=200 响应数据=静态文件 index.html (47051 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dqh6-c6437f 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1dqh6-c6437f 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (90257 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dqh8-962821 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[请求到达] traceId=httpreq-mvh1dqh9-c63e56 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1dqh9-47f355 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1dqh9-c12863 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[响应返回] traceId=httpreq-mvh1dqh8-962821 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1dqh9-c63e56 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=0ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1dqh9-47f355 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1dqh9-c12863 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dqha-813f0e 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1dqha-726a01 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1dqha-813f0e 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1dqha-726a01 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (125147 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dqk7-924262 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1dqk7-924262 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dqk7-6a7d32 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1dqk7-6a7d32 step=写入前端审计日志 客户端session=session-mvh1dqjy-e09h3vbo 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1dqk8-b06b83
+[响应返回] traceId=httpreq-mvh1dqk7-6a7d32 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dr0v-3c686d 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1dr0v-3c686d step=写入前端审计日志 客户端session=session-mvh1dqjy-e09h3vbo 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1dr0w-526e15
+[响应返回] traceId=httpreq-mvh1dr0v-3c686d 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1drkr-7bb56a 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1drkr-7bb56a step=写入前端审计日志 客户端session=session-mvh1dqjy-e09h3vbo 本次收到=5条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1drkr-74cc25
+[响应返回] traceId=httpreq-mvh1drkr-7bb56a 入口=POST /api/logs/report 状态码=200 响应数据=收到 5 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dsom-4c542b 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1dsom-4c542b step=写入前端审计日志 客户端session=session-mvh1dqjy-e09h3vbo 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1dson-67b3af
+[响应返回] traceId=httpreq-mvh1dsom-4c542b 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dst0-eaf1c3 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1dst0-eaf1c3 step=写入前端审计日志 客户端session=session-mvh1dqjy-e09h3vbo 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1dst1-917be5
+[响应返回] traceId=httpreq-mvh1dst0-eaf1c3 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1dt13-71b99b 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1dt13-71b99b step=写入前端审计日志 客户端session=session-mvh1dqjy-e09h3vbo 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1dt13-d3aade
+[响应返回] traceId=httpreq-mvh1dt13-71b99b 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1e52a-7cb2bd 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26300; zh-CN) PowerShell/7.6.6 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1e52a-7cb2bd 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1el1g-02afd5 入口=GET /?isolated=final-affordances 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1el1g-02afd5 入口=GET /?isolated=final-affordances 状态码=200 响应数据=静态文件 index.html (47051 bytes) 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1el1r-1b4882 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1el1r-1b4882 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (90257 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1el1u-2b633f 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1el1u-a02ff9 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1el1u-7a91a9 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1el1u-4bda74 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[响应返回] traceId=httpreq-mvh1el1u-a02ff9 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1el1u-2b633f 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1el1u-4bda74 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1el1u-7a91a9 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1el1w-3ff05b 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1el1w-2ff3c0 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1el1w-3ff05b 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1el1w-2ff3c0 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (125147 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1el4l-f15671 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1el4l-f15671 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1el4o-f31a16 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1el4o-f31a16 step=写入前端审计日志 客户端session=session-mvh1el1z-l2c87rkx 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1el4o-f13a36
+[响应返回] traceId=httpreq-mvh1el4o-f31a16 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1ella-23c0a1 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1ella-23c0a1 step=写入前端审计日志 客户端session=session-mvh1el1z-l2c87rkx 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1ella-eacad9
+[响应返回] traceId=httpreq-mvh1ella-23c0a1 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1em2e-712b7a 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1em2e-712b7a step=写入前端审计日志 客户端session=session-mvh1el1z-l2c87rkx 本次收到=2条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1em2f-0eb240
+[响应返回] traceId=httpreq-mvh1em2e-712b7a 入口=POST /api/logs/report 状态码=200 响应数据=收到 2 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1emo6-001bbe 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1emo6-001bbe step=写入前端审计日志 客户端session=session-mvh1el1z-l2c87rkx 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1emo6-185c30
+[响应返回] traceId=httpreq-mvh1emo6-001bbe 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1en95-79b131 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1en95-79b131 step=写入前端审计日志 客户端session=session-mvh1el1z-l2c87rkx 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1en96-719e3a
+[响应返回] traceId=httpreq-mvh1en95-79b131 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1ensz-dc4f3b 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1ensz-dc4f3b step=写入前端审计日志 客户端session=session-mvh1el1z-l2c87rkx 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1ensz-6f89bf
+[响应返回] traceId=httpreq-mvh1ensz-dc4f3b 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1eocr-360798 入口=GET /?isolated=final-affordances 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1eocr-360798 入口=GET /?isolated=final-affordances 状态码=200 响应数据=静态文件 index.html (47051 bytes) 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1eod3-52b278 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[请求到达] traceId=httpreq-mvh1eod3-3c9ff6 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[请求到达] traceId=httpreq-mvh1eod3-ef8c67 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1eod3-8ade76 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1eod3-5f7347 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1eod3-eadd92 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[响应返回] traceId=httpreq-mvh1eod3-ef8c67 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1eod3-5f7347 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1eod3-52b278 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1eod3-8ade76 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1eod3-eadd92 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1eod3-3c9ff6 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (90257 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1eod5-7178ed 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1eod5-7178ed 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (125147 bytes) 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1eodk-5a6a61 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[请求到达] traceId=httpreq-mvh1eodk-333936 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[响应返回] traceId=httpreq-mvh1eodk-5a6a61 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=0ms 最终业务结果=成功
+[业务入口] traceId=httpreq-mvh1eodk-333936 step=写入前端审计日志 客户端session=session-mvh1eoda-za42tvun 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1eodk-0175de
+[响应返回] traceId=httpreq-mvh1eodk-333936 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1eou7-4543b0 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1eou7-4543b0 step=写入前端审计日志 客户端session=session-mvh1eoda-za42tvun 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1eou7-7e7826
+[响应返回] traceId=httpreq-mvh1eou7-4543b0 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nrcs-8f46a0 入口=GET /?isolated=postcritique-mobile 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1nrcs-8f46a0 入口=GET /?isolated=postcritique-mobile 状态码=200 响应数据=静态文件 index.html (47033 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nrd6-730db6 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1nrd6-730db6 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (91134 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nrd8-e928c3 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[请求到达] traceId=httpreq-mvh1nrd8-2af7ac 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1nrd8-71f07b 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1nrd8-a8c488 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[响应返回] traceId=httpreq-mvh1nrd8-e928c3 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1nrd8-71f07b 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1nrd8-a8c488 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nrd9-986e3c 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1nrd8-2af7ac 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nrd9-4944e9 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[响应返回] traceId=httpreq-mvh1nrd9-986e3c 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (126247 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1nrd9-4944e9 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nrfy-05c22d 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[请求到达] traceId=httpreq-mvh1nrfy-b97cca 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1nrfy-b97cca 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=1ms 最终业务结果=成功
+[业务入口] traceId=httpreq-mvh1nrfy-05c22d step=写入前端审计日志 客户端session=session-mvh1nrfo-xs50m82z 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1nrfz-08f918
+[响应返回] traceId=httpreq-mvh1nrfy-05c22d 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nrwh-12f4bf 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1nrwh-12f4bf step=写入前端审计日志 客户端session=session-mvh1nrfo-xs50m82z 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1nrwh-07ef6a
+[响应返回] traceId=httpreq-mvh1nrwh-12f4bf 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nsdm-549eff 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1nsdm-549eff step=写入前端审计日志 客户端session=session-mvh1nrfo-xs50m82z 本次收到=5条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1nsdn-9dafa6
+[响应返回] traceId=httpreq-mvh1nsdm-549eff 入口=POST /api/logs/report 状态码=200 响应数据=收到 5 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1ntz0-ec2079 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1ntz0-ec2079 step=写入前端审计日志 客户端session=session-mvh1nrfo-xs50m82z 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1ntz1-9f7a5d
+[响应返回] traceId=httpreq-mvh1ntz0-ec2079 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nume-33a453 入口=GET /?isolated=postcritique-desktop 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1nume-33a453 入口=GET /?isolated=postcritique-desktop 状态码=200 响应数据=静态文件 index.html (47033 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nums-946e4d 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1nums-946e4d 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (91134 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1numu-2fccbc 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1numu-86fa09 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1numu-cb0a6a 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1numu-57a5a5 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[响应返回] traceId=httpreq-mvh1numu-2fccbc 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1numu-86fa09 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1numu-57a5a5 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1numu-cb0a6a 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1numv-2ce0da 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1numv-49ff24 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1numv-2ce0da 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1numv-49ff24 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (126247 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nupm-3f1778 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1nupm-3f1778 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nupo-66babb 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1nupo-66babb step=写入前端审计日志 客户端session=session-mvh1nuph-t28xkn5x 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1nupo-948658
+[响应返回] traceId=httpreq-mvh1nupo-66babb 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nv6j-6de7ae 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1nv6j-6de7ae step=写入前端审计日志 客户端session=session-mvh1nuph-t28xkn5x 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1nv6j-bae09b
+[响应返回] traceId=httpreq-mvh1nv6j-6de7ae 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1nvnn-129321 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1nvnn-129321 step=写入前端审计日志 客户端session=session-mvh1nuph-t28xkn5x 本次收到=2条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1nvno-975999
+[响应返回] traceId=httpreq-mvh1nvnn-129321 入口=POST /api/logs/report 状态码=200 响应数据=收到 2 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pa6d-e37f81 入口=GET /?isolated=critique-fix-desktop 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1pa6d-e37f81 入口=GET /?isolated=critique-fix-desktop 状态码=200 响应数据=静态文件 index.html (47033 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pa6t-78f62a 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1pa6t-78f62a 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (91134 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pa6v-3ef71e 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1pa6v-b08db4 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[请求到达] traceId=httpreq-mvh1pa6v-4002d0 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1pa6v-0ce768 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[响应返回] traceId=httpreq-mvh1pa6v-3ef71e 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=0ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pa6v-b08db4 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=0ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pa6v-0ce768 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=0ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pa6v-4002d0 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pa6w-03885d 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1pa6w-0bd0ac 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1pa6w-03885d 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pa6w-0bd0ac 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (126266 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pa9u-270713 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[请求到达] traceId=httpreq-mvh1pa9u-59f16a 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1pa9u-59f16a 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=1ms 最终业务结果=成功
+[业务入口] traceId=httpreq-mvh1pa9u-270713 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pa9v-c68fc6
+[响应返回] traceId=httpreq-mvh1pa9u-270713 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1paqi-b4be24 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1paqi-b4be24 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1paqi-e194a2
+[响应返回] traceId=httpreq-mvh1paqi-b4be24 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pb7i-fcb9c5 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pb7i-fcb9c5 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=5条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pb7j-4ef10f
+[响应返回] traceId=httpreq-mvh1pb7i-fcb9c5 入口=POST /api/logs/report 状态码=200 响应数据=收到 5 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pc9p-9b4e94 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pc9p-9b4e94 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pc9q-475839
+[响应返回] traceId=httpreq-mvh1pc9p-9b4e94 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pccd-1db4c2 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pccd-1db4c2 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pcce-fbfac0
+[响应返回] traceId=httpreq-mvh1pccd-1db4c2 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pcnh-623157 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pcnh-623157 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=9条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pcnh-a78b00
+[响应返回] traceId=httpreq-mvh1pcnh-623157 入口=POST /api/logs/report 状态码=200 响应数据=收到 9 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pd94-acea83 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pd94-acea83 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pd95-19a228
+[响应返回] traceId=httpreq-mvh1pd94-acea83 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pdbr-b6595a 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pdbr-b6595a step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pdbs-4fd474
+[响应返回] traceId=httpreq-mvh1pdbr-b6595a 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pdhc-03025d 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pdhc-03025d step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pdhd-84f48b
+[响应返回] traceId=httpreq-mvh1pdhc-03025d 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pdkd-bf87c3 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pdkd-bf87c3 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pdkd-744487
+[响应返回] traceId=httpreq-mvh1pdkd-bf87c3 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pdmw-c8c1c3 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pdmw-c8c1c3 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=2条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pdmx-12dae1
+[响应返回] traceId=httpreq-mvh1pdmw-c8c1c3 入口=POST /api/logs/report 状态码=200 响应数据=收到 2 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pe40-d03670 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pe40-d03670 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=7条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pe41-49d280
+[响应返回] traceId=httpreq-mvh1pe40-d03670 入口=POST /api/logs/report 状态码=200 响应数据=收到 7 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pekx-48230c 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pekx-48230c step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pekx-1f5fb6
+[响应返回] traceId=httpreq-mvh1pekx-48230c 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pfkh-6cac99 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pfkh-6cac99 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pfkh-32ac54
+[响应返回] traceId=httpreq-mvh1pfkh-6cac99 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pfm8-ff248b 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pfm8-ff248b step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pfm8-2f466f
+[响应返回] traceId=httpreq-mvh1pfm8-ff248b 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pfpm-d42825 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pfpm-d42825 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pfpn-98eea9
+[响应返回] traceId=httpreq-mvh1pfpm-d42825 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pfre-3de91a 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pfre-3de91a step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pfre-38243a
+[响应返回] traceId=httpreq-mvh1pfre-3de91a 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pft7-0fb5b2 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pft7-0fb5b2 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pft7-033ac9
+[响应返回] traceId=httpreq-mvh1pft7-0fb5b2 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pgka-007aa0 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pgka-007aa0 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pgka-fa1de2
+[响应返回] traceId=httpreq-mvh1pgka-007aa0 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pgm0-9b1cbd 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pgm0-9b1cbd step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pgm1-a9a155
+[响应返回] traceId=httpreq-mvh1pgm0-9b1cbd 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pgpf-1954ef 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pgpf-1954ef step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pgpg-a491d8
+[响应返回] traceId=httpreq-mvh1pgpf-1954ef 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pgr6-0e4b12 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pgr6-0e4b12 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pgr7-6e6411
+[响应返回] traceId=httpreq-mvh1pgr6-0e4b12 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pguo-302cd1 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pguo-302cd1 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pguo-d91dcb
+[响应返回] traceId=httpreq-mvh1pguo-302cd1 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pgwe-5e69e3 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pgwe-5e69e3 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pgwe-52ab20
+[响应返回] traceId=httpreq-mvh1pgwe-5e69e3 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pgy6-35bd82 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pgy6-35bd82 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pgy7-ed757d
+[响应返回] traceId=httpreq-mvh1pgy6-35bd82 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pgzd-cb8979 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pgzd-cb8979 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pgze-9e205b
+[响应返回] traceId=httpreq-mvh1pgzd-cb8979 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1phpb-6dc4ce 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1phpb-6dc4ce step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1phpc-b10ac1
+[响应返回] traceId=httpreq-mvh1phpb-6dc4ce 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=7ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1phr2-b719e9 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1phr2-b719e9 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1phr2-8c1099
+[响应返回] traceId=httpreq-mvh1phr2-b719e9 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1phuj-7189ff 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1phuj-7189ff step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1phuk-dc47e4
+[响应返回] traceId=httpreq-mvh1phuj-7189ff 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1phw8-f74378 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1phw8-f74378 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1phw9-942ee9
+[响应返回] traceId=httpreq-mvh1phw8-f74378 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=6ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1phzo-c71a39 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1phzo-c71a39 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1phzp-8f39c8
+[响应返回] traceId=httpreq-mvh1phzo-c71a39 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pi1g-fd8e1c 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pi1g-fd8e1c step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pi1h-25dc32
+[响应返回] traceId=httpreq-mvh1pi1g-fd8e1c 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pi37-6602e1 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pi37-6602e1 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pi38-249433
+[响应返回] traceId=httpreq-mvh1pi37-6602e1 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=7ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pi4g-69dd2a 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pi4g-69dd2a step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pi4g-68d778
+[响应返回] traceId=httpreq-mvh1pi4g-69dd2a 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1piu7-0c8da0 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1piu7-0c8da0 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1piu7-b4433f
+[响应返回] traceId=httpreq-mvh1piu7-0c8da0 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pivy-8a61ab 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pivy-8a61ab step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pivz-06e399
+[响应返回] traceId=httpreq-mvh1pivy-8a61ab 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pize-2c8b4a 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pize-2c8b4a step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pize-ec291d
+[响应返回] traceId=httpreq-mvh1pize-2c8b4a 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pj14-b86770 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pj14-b86770 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pj15-858209
+[响应返回] traceId=httpreq-mvh1pj14-b86770 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pj4h-c399c1 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pj4h-c399c1 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pj4i-814d3a
+[响应返回] traceId=httpreq-mvh1pj4h-c399c1 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pj68-390d2c 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pj68-390d2c step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pj68-4d0b45
+[响应返回] traceId=httpreq-mvh1pj68-390d2c 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pj7y-4153db 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pj7y-4153db step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pj7z-9c8248
+[响应返回] traceId=httpreq-mvh1pj7y-4153db 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=6ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pjbh-718c81 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pjbh-718c81 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pjbh-3dba44
+[响应返回] traceId=httpreq-mvh1pjbh-718c81 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pjd9-50397b 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pjd9-50397b step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pjd9-5d7d41
+[响应返回] traceId=httpreq-mvh1pjd9-50397b 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pjgp-67ee80 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pjgp-67ee80 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pjgq-8ea11d
+[响应返回] traceId=httpreq-mvh1pjgp-67ee80 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=5ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pjif-e63ce6 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pjif-e63ce6 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=10条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pjig-896ce8
+[响应返回] traceId=httpreq-mvh1pjif-e63ce6 入口=POST /api/logs/report 状态码=200 响应数据=收到 10 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pjqk-d6f3f4 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pjqk-d6f3f4 step=写入前端审计日志 客户端session=session-mvh1pa9n-dz8uu6jz 本次收到=9条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pjql-089fdb
+[响应返回] traceId=httpreq-mvh1pjqk-d6f3f4 入口=POST /api/logs/report 状态码=200 响应数据=收到 9 条日志并写入 logs/ 耗时=4ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pk5z-6b9671 入口=GET /?isolated=critique-fix-mobile 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1pk5z-6b9671 入口=GET /?isolated=critique-fix-mobile 状态码=200 响应数据=静态文件 index.html (47033 bytes) 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pk6a-e4f94f 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1pk6a-e4f94f 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (91134 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pk6c-14202c 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1pk6c-7c516d 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1pk6c-a5851c 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1pk6c-ab430f 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[响应返回] traceId=httpreq-mvh1pk6c-14202c 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pk6c-a5851c 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pk6c-7c516d 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pk6c-ab430f 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pk6e-fa792f 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1pk6e-6a50d9 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1pk6e-fa792f 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=0ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1pk6e-6a50d9 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (126266 bytes) 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pk8x-5533b5 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1pk8x-5533b5 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pk8y-0e6ea3 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pk8y-0e6ea3 step=写入前端审计日志 客户端session=session-mvh1pk6g-lxdvjoo9 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pk8z-75f2ba
+[响应返回] traceId=httpreq-mvh1pk8y-0e6ea3 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pkpn-2b7823 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pkpn-2b7823 step=写入前端审计日志 客户端session=session-mvh1pk6g-lxdvjoo9 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pkpn-efe847
+[响应返回] traceId=httpreq-mvh1pkpn-2b7823 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pl6f-eb8d7f 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pl6f-eb8d7f step=写入前端审计日志 客户端session=session-mvh1pk6g-lxdvjoo9 本次收到=5条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pl6f-36361b
+[响应返回] traceId=httpreq-mvh1pl6f-eb8d7f 入口=POST /api/logs/report 状态码=200 响应数据=收到 5 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1pmno-65e963 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1pmno-65e963 step=写入前端审计日志 客户端session=session-mvh1pk6g-lxdvjoo9 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1pmno-afd76a
+[响应返回] traceId=httpreq-mvh1pmno-65e963 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1po77-1b509d 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1po77-1b509d step=写入前端审计日志 客户端session=session-mvh1pk6g-lxdvjoo9 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1po78-f65098
+[响应返回] traceId=httpreq-mvh1po77-1b509d 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=3ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r60k-bf124c 入口=GET /?isolated=ending-title-fix 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1r60k-bf124c 入口=GET /?isolated=ending-title-fix 状态码=200 响应数据=静态文件 index.html (47033 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r60x-562e0e 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1r60x-562e0e 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (91247 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r60z-2b9281 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1r60z-5e647f 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[请求到达] traceId=httpreq-mvh1r60z-700da9 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1r60z-706833 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[响应返回] traceId=httpreq-mvh1r60z-2b9281 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1r60z-5e647f 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1r60z-706833 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1r60z-700da9 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r610-9ac726 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1r610-da64a0 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1r610-9ac726 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1r610-da64a0 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (126341 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r63p-7f7e7c 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1r63p-7f7e7c 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r63q-8d6a07 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1r63q-8d6a07 step=写入前端审计日志 客户端session=session-mvh1r612-x4ceef04 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1r63r-8f8958
+[响应返回] traceId=httpreq-mvh1r63q-8d6a07 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r6ki-e616e2 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1r6ki-e616e2 step=写入前端审计日志 客户端session=session-mvh1r612-x4ceef04 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1r6kj-646918
+[响应返回] traceId=httpreq-mvh1r6ki-e616e2 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1r71o-41d9dd 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1r71o-41d9dd step=写入前端审计日志 客户端session=session-mvh1r612-x4ceef04 本次收到=2条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1r71o-b03820
+[响应返回] traceId=httpreq-mvh1r71o-41d9dd 入口=POST /api/logs/report 状态码=200 响应数据=收到 2 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1unw5-b2eef7 入口=GET /?isolated=final-ending-check 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/
+[响应返回] traceId=httpreq-mvh1unw5-b2eef7 入口=GET /?isolated=final-ending-check 状态码=200 响应数据=静态文件 index.html (47033 bytes) 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1unwj-6e54ec 入口=GET /css/style.css 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/css/style.css
+[响应返回] traceId=httpreq-mvh1unwj-6e54ec 入口=GET /css/style.css 状态码=200 响应数据=静态文件 css\style.css (91247 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1unwl-423257 入口=GET /js/logger.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/logger.js
+[请求到达] traceId=httpreq-mvh1unwl-b45c07 入口=GET /js/levels.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/levels.js
+[请求到达] traceId=httpreq-mvh1unwl-38f6dd 入口=GET /js/audio.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/audio.js
+[请求到达] traceId=httpreq-mvh1unwl-9eedd4 入口=GET /js/engine.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/engine.js
+[响应返回] traceId=httpreq-mvh1unwl-423257 入口=GET /js/logger.js 状态码=200 响应数据=静态文件 js\logger.js (6692 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1unwl-38f6dd 入口=GET /js/audio.js 状态码=200 响应数据=静态文件 js\audio.js (15567 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1unwl-b45c07 入口=GET /js/levels.js 状态码=200 响应数据=静态文件 js\levels.js (15547 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1unwl-9eedd4 入口=GET /js/engine.js 状态码=200 响应数据=静态文件 js\engine.js (27135 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1unwm-65b614 入口=GET /js/renderer.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/renderer.js
+[请求到达] traceId=httpreq-mvh1unwm-e62700 入口=GET /js/game.js 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/js/game.js
+[响应返回] traceId=httpreq-mvh1unwm-65b614 入口=GET /js/renderer.js 状态码=200 响应数据=静态文件 js\renderer.js (82219 bytes) 耗时=1ms 最终业务结果=成功
+[响应返回] traceId=httpreq-mvh1unwm-e62700 入口=GET /js/game.js 状态码=200 响应数据=静态文件 js\game.js (126341 bytes) 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1unzf-e73d6f 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1unzf-e73d6f 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=0ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1unzg-682d6e 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1unzg-682d6e step=写入前端审计日志 客户端session=session-mvh1unz9-uqmpb6q1 本次收到=4条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1unzg-15eafd
+[响应返回] traceId=httpreq-mvh1unzg-682d6e 入口=POST /api/logs/report 状态码=200 响应数据=收到 4 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1uogb-bbc7fc 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1uogb-bbc7fc step=写入前端审计日志 客户端session=session-mvh1unz9-uqmpb6q1 本次收到=1条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1uogb-6e8fb8
+[响应返回] traceId=httpreq-mvh1uogb-bbc7fc 入口=POST /api/logs/report 状态码=200 响应数据=收到 1 条日志并写入 logs/ 耗时=1ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1uoxf-45def9 入口=POST /api/logs/report 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 关键参数=/api/logs/report
+[业务入口] traceId=httpreq-mvh1uoxf-45def9 step=写入前端审计日志 客户端session=session-mvh1unz9-uqmpb6q1 本次收到=2条 来源=127.0.0.1 写入文件=frontend-dev-2026-10-21.log,audit-dev-2026-10-21.log 批次=batch-mvh1uoxg-45b309
+[响应返回] traceId=httpreq-mvh1uoxf-45def9 入口=POST /api/logs/report 状态码=200 响应数据=收到 2 条日志并写入 logs/ 耗时=2ms 最终业务结果=成功
+[请求到达] traceId=httpreq-mvh1veu9-b88e1f 入口=GET /api/logs/health 来源=127.0.0.1 客户端=Mozilla/5.0 (Windows NT 10.0; Microsoft Windows 10.0.26300; zh-CN) PowerShell/7.6.6 关键参数=/api/logs/health
+[响应返回] traceId=httpreq-mvh1veu9-b88e1f 入口=GET /api/logs/health 状态码=200 响应数据=健康检查通过 耗时=0ms 最终业务结果=成功

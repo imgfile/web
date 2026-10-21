@@ -1,0 +1,260 @@
+{
+  "protocol": "frontend-art-direction/research-atlas-v1",
+  "version": 1,
+  "id": "atlas-20261020173303-763a6993",
+  "status": "complete",
+  "mode": "reference-led",
+  "createdAt": "2026-10-20T17:33:03.307Z",
+  "updatedAt": "2026-10-20T18:35:04.464Z",
+  "projectRoot": "C:\\Users\\root\\AppData\\Local\\Temp\\chrono-paradox-lab",
+  "query": "原创浏览器时间循环解谜游戏：时间回响与因果锚的完整叙事体验",
+  "policy": {
+    "userReferencesFirst": true,
+    "sectionWinnersMayComeFromDifferentSources": true,
+    "referenceIsEvidenceOnlyAfterInspection": true,
+    "noReferenceFallback": "Use subject, local evidence, and authored direction; do not invent a skin from the catalog."
+  },
+  "references": [
+    {
+      "id": "project-design-authority",
+      "label": "项目自有视觉方向 DESIGN.md",
+      "url": null,
+      "kind": "local",
+      "status": "selected",
+      "role": "composition, type, material, motion authority",
+      "evidence": [
+        {
+          "ref": "DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true
+        },
+        {
+          "ref": "PRODUCT.md",
+          "kind": "artifact-or-check",
+          "exists": true
+        },
+        {
+          "ref": "GAME_DESIGN.md",
+          "kind": "artifact-or-check",
+          "exists": true
+        }
+      ],
+      "strengths": [
+        "与时间循环主题强绑定；仪器化而非模板化；明确拒绝通用霓虹/玻璃卡片墙"
+      ],
+      "weaknesses": [
+        "无外部竞品校验，需以实机截图验证"
+      ],
+      "borrow": [
+        "非对称实验台构图、青玉/紫铜/石墨材料、回响裂相与仪器化读数"
+      ],
+      "reject": [
+        "居中英雄页、玻璃卡片墙、无机制支撑的装饰动效"
+      ],
+      "observations": [
+        "方向先由主题与玩法推导，再以实机截图迭代；桌面和移动端均已验证。"
+      ],
+      "updatedAt": "2026-10-20T18:35:04.414Z"
+    }
+  ],
+  "sections": [
+    {
+      "id": "navigation",
+      "label": "Navigation and entry",
+      "prompt": "Does the entry structure establish the product and invite the right first action?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:42.733Z"
+    },
+    {
+      "id": "first-viewport",
+      "label": "First viewport",
+      "prompt": "What leads the eye, what is dominant, and what peeks into the next chapter?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:42.787Z"
+    },
+    {
+      "id": "object-or-content",
+      "label": "Object or content",
+      "prompt": "How is the actual subject, artifact, data, or workflow made visible?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:42.837Z"
+    },
+    {
+      "id": "composition-and-rhythm",
+      "label": "Composition and rhythm",
+      "prompt": "Which alignment, scale, spacing, crop, and counterweight relationships create the silhouette?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:42.888Z"
+    },
+    {
+      "id": "responsive",
+      "label": "Responsive re-staging",
+      "prompt": "What changes on narrow screens, touch input, and long content?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:42.938Z"
+    },
+    {
+      "id": "states-and-interaction",
+      "label": "States and interaction",
+      "prompt": "How do controls, feedback, empty/error/success states, and recovery read?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:42.987Z"
+    },
+    {
+      "id": "motion",
+      "label": "Motion language",
+      "prompt": "Which changes need motion, and what are the cleanup, reduced-motion, and static final states?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:43.038Z"
+    },
+    {
+      "id": "assets-and-material",
+      "label": "Assets and material",
+      "prompt": "Which image, video, texture, type, color, and surface choices carry the subject?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:43.088Z"
+    },
+    {
+      "id": "ending",
+      "label": "Ending and continuation",
+      "prompt": "How does the surface resolve, hand off, or make the next action legible?",
+      "status": "skipped",
+      "winner": null,
+      "decision": "本项目为原创游戏体验，未发现需要借用的现成视觉案例；以项目自有 DESIGN.md、因果核心媒体语汇与实机渲染为证据，不强行选择外部参考。",
+      "evidence": [],
+      "recordedAt": "2026-10-20T18:34:43.139Z"
+    }
+  ],
+  "synthesis": {
+    "status": "complete",
+    "direction": "仪器化观察窗：把因果核心、玩家与过去回响作为画面主体，界面像实验仪控台而非网页模板。",
+    "visualLanguage": "石墨黑实验室、青玉磷光、紫铜因果锚、骨白仪器字；细线、蚀刻铭牌与真实数据刻度。",
+    "composition": "左窄任务轨道、中最大因果观测窗、右窄因果监控台的非对称实验台；移动端重排为舞台、仪器监控、拇指操作区。",
+    "type": "Bahnschrift/微软雅黑的分层仪器标题；Cascadia Mono 承载状态、坐标与因果读数；正文保持 12–16px 的可读层级。",
+    "material": "程序化 Canvas 金属地块、能量门、回响重影与真实时间环；CSS 仅用于面板与边框，不堆玻璃层。",
+    "motion": "移动与压力板为 100–220ms 机械反馈；倒带为 820ms 的时间反演与 RGB 裂相；全部提供 reduced-motion 静态路径。",
+    "assets": "无外部图片/音频：所有视觉由 Canvas 绘制，声音由 WebAudio 合成；有意的 assetless composition。",
+    "templateRisk": "低：以可玩关卡、可验证因果逻辑和完整终局为核心，不以营销首屏或卡片墙充当内容。",
+    "gaps": [
+      "无外部参考案例；以实机渲染、桌面/移动截图与引擎测试作为替代证据。"
+    ],
+    "rejectedDefaults": [
+      "居中英雄页",
+      "玻璃卡片墙",
+      "霓虹紫蓝渐变",
+      "伪统计仪表盘",
+      "无终局的概念展示"
+    ]
+  },
+  "skills": {
+    "selected": [],
+    "unavailable": []
+  },
+  "history": [
+    {
+      "type": "section",
+      "section": "navigation",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:42.733Z"
+    },
+    {
+      "type": "section",
+      "section": "first-viewport",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:42.788Z"
+    },
+    {
+      "type": "section",
+      "section": "object-or-content",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:42.837Z"
+    },
+    {
+      "type": "section",
+      "section": "composition-and-rhythm",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:42.888Z"
+    },
+    {
+      "type": "section",
+      "section": "responsive",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:42.938Z"
+    },
+    {
+      "type": "section",
+      "section": "states-and-interaction",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:42.988Z"
+    },
+    {
+      "type": "section",
+      "section": "motion",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:43.038Z"
+    },
+    {
+      "type": "section",
+      "section": "assets-and-material",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:43.088Z"
+    },
+    {
+      "type": "section",
+      "section": "ending",
+      "status": "skipped",
+      "winner": null,
+      "at": "2026-10-20T18:34:43.139Z"
+    },
+    {
+      "type": "synthesis",
+      "at": "2026-10-20T18:34:43.190Z"
+    },
+    {
+      "type": "reference",
+      "id": "project-design-authority",
+      "status": "selected",
+      "at": "2026-10-20T18:35:04.414Z"
+    }
+  ],
+  "completedAt": "2026-10-20T18:35:04.464Z",
+  "qualityBar": {
+    "selectedReferences": [
+      "project-design-authority"
+    ],
+    "sectionWinners": {},
+    "templateRisk": "低：以可玩关卡、可验证因果逻辑和完整终局为核心，不以营销首屏或卡片墙充当内容。"
+  }
+}

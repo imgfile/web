@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#050a10" />
+  <meta name="description" content="《时间悖论：失控实验室》——一款关于时间回声、因果回路与机关解谜的高完成度浏览器游戏。" />
+  <title>时间悖论：失控实验室</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23050a10'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%2368edff' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='12' fill='none' stroke='%2368edff' stroke-width='1' stroke-dasharray='3 4'/%3E%3Ccircle cx='32' cy='32' r='4' fill='%23ffbb66'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <canvas id="title-canvas" class="title-canvas" aria-hidden="true"></canvas>
+    <div class="global-grain" aria-hidden="true"></div>
+    <div class="global-scanlines" aria-hidden="true"></div>
+
+    <header class="site-chrome" id="site-chrome">
+      <a class="brand" href="#" id="brand-home" aria-label="返回控制室">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="brand-copy">
+          <strong>MERIDIAN</strong>
+          <small>CHRONOPHYSICS / SITE 07</small>
+        </span>
+      </a>
+      <div class="chrome-right">
+        <span class="chrome-signal"><i></i> CONTAINMENT LINK</span>
+        <button class="icon-button" id="sound-toggle" type="button" aria-label="切换声音" title="声音 (M)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Zm12.5-1.5a6.2 6.2 0 0 1 0 9M19 5a9.6 9.6 0 0 1 0 14" /></svg>
+        </button>
+        <button class="icon-button" id="help-toggle" type="button" aria-label="操作手册" title="操作手册 (H)">
+          <span>?</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="screen-stack">
+      <section id="title-screen" class="screen title-screen is-active" aria-labelledby="game-title">
+        <div class="title-layout">
+          <div class="title-main">
+            <div class="title-kicker reveal-1">
+              <span class="status-light danger"></span>
+              CONTAINMENT BREACH / 03:17:42
+              <span class="kicker-rule"></span>
+              <span class="mono">ARCHIVE 07</span>
+            </div>
+
+            <div class="title-heading reveal-2">
+              <div class="title-index" aria-hidden="true">CP<br /><span>07</span></div>
+              <h1 id="game-title" class="glitch-title" data-text="时间悖论">
+                <span>时间悖论</span>
+              </h1>
+              <p class="title-subline">失控实验室 <span>/ LAB ZERO</span></p>
+            </div>
+
+            <p class="title-lead reveal-3">
+              每一次回溯，都会留下一个你。<br />
+              七座实验舱。一个被因果折叠的实验室。<br />
+              你必须用过去的影子，打开未来的门。
+            </p>
+
+            <div class="title-actions reveal-4">
+              <button class="button button-primary" id="start-button" type="button">
+                <span class="button-label" id="start-label">进入设施</span>
+                <span class="button-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button class="button button-ghost" id="chapters-button" type="button">
+                实验舱档案
+              </button>
+              <button class="text-button" id="manual-title-button" type="button">操作手册 / 机制档案</button>
+            </div>
+
+            <div class="title-meta reveal-5">
+              <div class="meta-cell">
+                <span>PROGRESS</span>
+                <strong id="title-progress">00 / 07</strong>
+              </div>
+              <div class="meta-cell">
+                <span>ECHO PROTOCOL</span>
+                <strong>STANDBY</strong>
+              </div>
+              <div class="meta-cell">
+                <span>OPERATIVE</span>
+                <strong>K-07</strong>
+              </div>
+            </div>
+          </div>
+
+          <aside class="title-aside reveal-3" aria-label="设施状态">
+            <div class="aside-topline">
+              <span>LIVE TELEMETRY</span>
+              <span class="blinking">● REC</span>
+            </div>
+            <div class="breach-readout">
+              <span class="readout-label">PARADOX CORE</span>
+              <strong>BREACH</strong>
+              <div class="breach-meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="readout-foot"><span>CAUSAL DRIFT</span><span>1.439×10⁶</span></div>
+            </div>
+            <div class="telemetry-list">
+              <div><span>TIME LOCK</span><em>03:17:42</em></div>
+              <div><span>CHAMBERS</span><em>07 SEALED</em></div>
+              <div><span>ECHO CAPACITY</span><em id="title-echo-capacity">0 / 3</em></div>
+              <div><span>EXIT VECTOR</span><em class="danger-text">NULL</em></div>
+            </div>
+            <div class="aside-quote">
+              <span class="quote-index">HELIX / 01</span>
+              <p>“你不是第一个抵达这里的人。<br />你只是第一个还在问为什么的人。”</p>
+            </div>
+            <div class="aside-ticks" aria-hidden="true">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </aside>
+        </div>
+
+        <footer class="title-footer">
+          <span>MERIDIAN / CHRONO CONTAINMENT WING</span>
+          <span class="footer-center">A PUZZLE ABOUT CAUSALITY / BUILT FOR THE BROWSER</span>
+          <span>BUILD 0.9.7 / 2147.10.21</span>
+        </footer>
+      </section>
+
+      <section id="game-screen" class="screen game-screen" aria-label="时间悖论游戏区域">
+        <div class="game-shell">
+          <div class="game-topline">
+            <div class="game-breadcrumb">
+              <span class="breadcrumb-dot"></span>
+              <span>CHAMBER <strong id="crumb-number">01</strong></span>
+              <span class="breadcrumb-slash">/</span>
+              <span id="crumb-name">线性校准</span>
+            </div>
+            <div class="game-toolbar">
+              <span class="toolbar-status"><i></i><span id="toolbar-phase">TEMPORAL FIELD STABLE</span></span>
+              <button class="small-tool" id="pause-button" type="button" aria-label="暂停游戏">ESC <span>暂停</span></button>
+              <button class="icon-button icon-button-small" id="game-help-toggle" type="button" aria-label="操作手册" title="操作手册 (H)">
+                <span>?</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="game-grid">
+            <div class="stage-column">
+              <div class="stage-frame" id="stage-frame" tabindex="0" aria-label="实验舱交互地图">
+                <canvas id="game-canvas"></canvas>
+                <div class="stage-scanlines" aria-hidden="true"></div>
+                <div class="stage-vignette" aria-hidden="true"></div>
+                <div class="stage-corner stage-corner-tl" aria-hidden="true"></div>
+                <div class="stage-corner stage-corner-tr" aria-hidden="true"></div>
+                <div class="stage-corner stage-corner-bl" aria-hidden="true"></div>
+                <div class="stage-corner stage-corner-br" aria-hidden="true"></div>
+
+                <div class="scene-hud">
+                  <div class="hud-block hud-tick">
+                    <span class="hud-label">LOCAL TIMELINE</span>
+                    <strong>T+<span id="hud-tick">000</span></strong>
+                  </div>
+                  <div class="hud-block hud-echoes">
+                    <span class="hud-label">ECHO CHAIN</span>
+                    <strong><span id="hud-echo-count">00</span><small id="hud-echo-max">/ 00</small></strong>
+                  </div>
+                  <div class="hud-block hud-sync">
+                    <span class="hud-label">CAUSAL SYNC</span>
+                    <div class="sync-meter" id="sync-meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  </div>
+                </div>
+
+                <div class="objective-banner" id="objective-banner">
+                  <span class="objective-kicker">PRIMARY OBJECTIVE</span>
+                  <span id="objective-short">抵达安全出口</span>
+                </div>
+
+                <div class="quick-actions" aria-label="快捷操作">
+                  <button class="quick-button" id="quick-wait" type="button" title="等待一个时间刻度 (空格)">
+                    <span class="quick-glyph">◌</span><span>等待</span>
+                  </button>
+                  <button class="quick-button" id="quick-interact" type="button" title="与脚下终端交互 (E)">
+                    <span class="quick-glyph">⌁</span><span>交互</span>
+                  </button>
+                  <button class="quick-button quick-button-accent" id="quick-fork" type="button" title="将当前时间线固化为回声 (R)">
+                    <span class="quick-glyph">↯</span><span>回声</span>
+                  </button>
+                </div>
+
+                <div class="helix-dialogue" id="helix-dialogue" aria-live="polite">
+                  <div class="helix-avatar" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <div class="helix-copy">
+                    <span class="helix-name">HELIX <em>// FACILITY INTELLIGENCE</em></span>
+                    <p id="helix-text">因果场已接入。请完成校准。</p>
+                  </div>
+                  <button class="dialogue-close" id="dialogue-close" type="button" aria-label="关闭对话">×</button>
+                </div>
+
+                <div class="cell-tooltip" id="cell-tooltip" hidden></div>
+                <div class="stage-flash" id="stage-flash" aria-hidden="true"></div>
+                <div class="fork-caption" id="fork-caption" aria-hidden="true">
+                  <span>TIMELINE FORK</span>
+                  <strong>ECHO COMMITTED</strong>
+                </div>
+              </div>
+
+              <div class="timeline-deck">
+                <div class="tick-display">
+                  <span class="mono-label">CHRONON</span>
+                  <strong id="tick-value">000</strong>
+                  <small>LOCAL</small>
+                </div>
+                <div class="timeline-main">
+                  <div class="timeline-labels">
+                    <span>时间轴</span>
+                    <span id="timeline-state">AWAITING ACTION</span>
+                  </div>
+                  <div class="timeline-rail" id="timeline-rail">
+                    <div class="timeline-fill" id="timeline-fill"></div>
+                    <div class="timeline-marker" id="timeline-marker"></div>
+                    <div id="timeline-echo-marks"></div>
+                  </div>
+                </div>
+                <div class="shortcut-legend" aria-label="键盘提示">
+                  <span><kbd>WASD</kbd> 移动</span>
+                  <span><kbd>R</kbd> 留声</span>
+                  <span><kbd>⌫</kbd> 重写</span>
+                </div>
+              </div>
+
+              <div class="touch-deck" aria-label="触屏控制">
+                <div class="touch-pad">
+                  <button class="touch-button pad-up" data-move="up" type="button" aria-label="向上移动">↑</button>
+                  <button class="touch-button pad-left" data-move="left" type="button" aria-label="向左移动">←</button>
+                  <span class="touch-center" aria-hidden="true"></span>
+                  <button class="touch-button pad-right" data-move="right" type="button" aria-label="向右移动">→</button>
+                  <button class="touch-button pad-down" data-move="down" type="button" aria-label="向下移动">↓</button>
+                </div>
+                <div class="touch-action-set">
+                  <button class="touch-button touch-action" id="touch-wait" type="button">等待</button>
+                  <button class="touch-button touch-action" id="touch-interact" type="button">交互</button>
+                  <button class="touch-button touch-action touch-action-accent" id="touch-fork" type="button">留声</button>
+                </div>
+              </div>
+            </div>
+
+            <aside class="instrument-panel" id="instrument-panel">
+              <section class="panel-section mission-section">
+                <div class="section-topline"><span>ACTIVE EXPERIMENT</span><span id="side-level-index">01 / 07</span></div>
+                <div class="mission-title-row">
+                  <h2 id="side-title">线性校准</h2>
+                  <span class="mission-number" id="side-mission-number">01</span>
+                </div>
+                <p class="mission-english" id="side-english">LINEAR CALIBRATION</p>
+                <p class="mission-copy" id="side-objective">恢复环境终端供电，穿越隔离门，抵达校准出口。</p>
+                <div class="condition-block">
+                  <div class="mini-heading"><span>因果条件</span><span id="condition-count">0 / 1</span></div>
+                  <div class="condition-list" id="condition-list"></div>
+                </div>
+              </section>
+
+              <section class="panel-section echo-section">
+                <div class="mini-heading">
+                  <span>TEMPORAL STACK / 时间栈</span>
+                  <span id="echo-capacity">0 / 0</span>
+                </div>
+                <div class="echo-stack" id="echo-stack"></div>
+                <button class="inline-action" id="undo-echo-button" type="button" disabled>回收最后回声 <span>⌁</span></button>
+              </section>
+
+              <section class="panel-section controls-section">
+                <div class="mini-heading"><span>CONTROL MAP</span><span>KEYBOARD</span></div>
+                <div class="control-grid">
+                  <div><kbd>WASD</kbd><span>移动</span></div>
+                  <div><kbd>E</kbd><span>终端交互</span></div>
+                  <div><kbd>SPACE</kbd><span>等待刻度</span></div>
+                  <div><kbd>R</kbd><span>固化回声</span></div>
+                  <div><kbd>⌫</kbd><span>重写本线</span></div>
+                  <div><kbd>H</kbd><span>机制手册</span></div>
+                </div>
+              </section>
+
+              <section class="panel-section log-section">
+                <div class="mini-heading"><span>SYSTEM LOG</span><span class="live-dot">LIVE</span></div>
+                <div class="log-list" id="log-list" aria-live="polite"></div>
+              </section>
+
+              <section class="panel-section panel-actions">
+                <button class="panel-button" id="hint-button" type="button"><span>请求线索</span><span class="button-meta">HINT</span></button>
+                <button class="panel-button" id="reset-attempt-button" type="button"><span>重写当前时间线</span><span class="button-meta">⌫</span></button>
+                <button class="panel-button panel-button-danger" id="purge-button" type="button"><span>清空本层因果缓存</span><span class="button-meta">X</span></button>
+              </section>
+
+              <div class="panel-footer">
+                <span><i class="status-dot"></i> ECHO PROTOCOL ONLINE</span>
+                <button class="text-button small" id="quit-to-title-button" type="button">返回控制室</button>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast-stack" id="toast-stack" aria-live="polite"></div>
+
+    <div class="modal-layer" id="level-intro-overlay" aria-hidden="true">
+      <div class="modal chamber-brief">
+        <button class="modal-close" data-close-modal="level-intro-overlay" type="button" aria-label="关闭">×</button>
+        <div class="chamber-watermark" id="intro-watermark">01</div>
+        <div class="brief-topline">
+          <span>MERIDIAN / EXPERIMENT ENTRY</span>
+          <span id="intro-breadcrumb">CALIBRATION WING</span>
+        </div>
+        <div class="brief-grid">
+          <div class="brief-main">
+            <span class="kicker" id="intro-kicker">CHAMBER 01 / LINEAR CALIBRATION</span>
+            <h2 id="intro-title">线性校准</h2>
+            <p class="brief-lead" id="intro-lead">“所有灾难，都从一次校准开始。”</p>
+            <p class="brief-copy" id="intro-copy"></p>
+            <div class="mechanic-row" id="intro-mechanics"></div>
+            <div class="brief-objective">
+              <span>PRIMARY OBJECTIVE</span>
+              <p id="intro-objective"></p>
+            </div>
+            <button class="button button-primary" id="enter-chamber-button" type="button">
+              <span>接入时间线</span><span class="button-arrow">↗</span>
+            </button>
+          </div>
+          <aside class="brief-side">
+            <div class="brief-stat"><span>CHAMBER</span><strong id="intro-index">01 / 07</strong></div>
+            <div class="brief-stat"><span>MAX ECHOES</span><strong id="intro-echoes">00</strong></div>
+            <div class="brief-stat"><span>CAUSAL DEPTH</span><strong id="intro-depth">LINEAR</strong></div>
+            <div class="brief-quote">
+              <span>FIELD NOTE</span>
+              <p id="intro-field-note"></p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-layer" id="help-overlay" aria-hidden="true">
+      <div class="modal manual-modal">
+        <button class="modal-close" data-close-modal="help-overlay" type="button" aria-label="关闭">×</button>
+        <div class="modal-header">
+          <div>
+            <span class="kicker">RESEARCH MANUAL / 07-A</span>
+            <h2>时间因果操作手册</h2>
+          </div>
+          <span class="manual-stamp">PROPERTY OF MERIDIAN</span>
+        </div>
+        <div class="manual-scroll">
+          <section class="manual-section manual-intro">
+            <p><strong>核心原则：</strong>当前时间线上的每个成功行动都会推进一个刻度（CHRONON）。按 <kbd>R</kbd> 将当前路径固化为一条时间回声，然后重新从起点开始。回声会在之后的每次尝试中重复你当初的路径。</p>
+          </section>
+          <div class="manual-grid">
+            <section class="manual-section">
+              <h3><span>01</span> 时间回声</h3>
+              <p>回声是已经封存的过去。它可以替你压住压力板、穿过已经打开的门，并在终点永久停留。回声彼此以及与你都可以重叠，但未开启的门与墙体仍会阻挡它们。</p>
+              <p class="manual-note">若回声数量已满，需先回收最后一条回声或清空本层缓存。</p>
+            </section>
+            <section class="manual-section">
+              <h3><span>02</span> 因果对象</h3>
+              <p>普通门只响应当前时刻的压力板；门关闭时会阻挡所有实体。终端记录属于因果对象：一旦被已固化的时间线确认，它会保持在后续时间线中；未固化的当前路径仍可被完整重写。</p>
+              <p>记忆终端 <em>M</em> 只接受回声签名。你可以站在它上面按 <kbd>E</kbd> 记录路径，但真正写入必须由回声完成。</p>
+            </section>
+            <section class="manual-section">
+              <h3><span>03</span> 压力与共振</h3>
+              <p>压力板按占用它的“实体数量”计数。普通板需要 1 个实体；共振板 <em>R</em> 需要 2 个实体同时站上去——可以是两个回声，也可以是你和一个回声。</p>
+              <p>回声可以重叠。屏幕上的角色偏移只是观测造成的视觉残差。</p>
+            </section>
+            <section class="manual-section">
+              <h3><span>04</span> 门与因果锁</h3>
+              <p>因果门由标签字母连接：<em>a</em> 由 <em>A</em> 板控制，<em>t</em> 由 <em>T</em> 终端控制。最终门 <em>z</em> 可能同时要求多个条件。</p>
+              <p>带有“闭锁”属性的门会在条件首次满足后保持开启；其余门会实时响应条件变化。</p>
+            </section>
+            <section class="manual-section">
+              <h3><span>05</span> 操作与反馈</h3>
+              <p><kbd>WASD</kbd>/方向键移动，<kbd>Space</kbd> 等待一个刻度，<kbd>E</kbd> 与脚下终端交互，<kbd>R</kbd> 固化回声，<kbd>Backspace</kbd> 重写当前时间线。</p>
+              <p>失败不会推进时间。撞上关闭的门时，先观察回声的位置，再用等待刻度对齐它们。</p>
+            </section>
+            <section class="manual-section">
+              <h3><span>06</span> 目标</h3>
+              <p>抵达安全出口即可完成实验舱。每个舱室的条件不同，但最终目标始终是让当前时间的你走到出口，而不是让回声替代你。</p>
+            </section>
+          </div>
+          <section class="manual-section manual-footer">
+            <span>“过去不是记忆。过去是可以被安排的证人。”</span>
+            <strong>— HELIX / FACILITY INTELLIGENCE</strong>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-layer" id="chapters-overlay" aria-hidden="true">
+      <div class="modal chapters-modal">
+        <button class="modal-close" data-close-modal="chapters-overlay" type="button" aria-label="关闭">×</button>
+        <div class="modal-header">
+          <div>
+            <span class="kicker">EXPERIMENT ARCHIVE / SELECT CHAMBER</span>
+            <h2>实验舱档案</h2>
+          </div>
+          <span class="archive-progress" id="archive-progress">00 / 07 STABILIZED</span>
+        </div>
+        <div class="chapter-list" id="chapter-list"></div>
+        <div class="chapter-footer">
+          <span>点击已解锁的实验舱重新接入时间线。</span>
+          <button class="text-button small danger-text" id="reset-save-button" type="button">清除全部实验记录</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-layer" id="confirm-overlay" aria-hidden="true">
+      <div class="modal confirm-modal">
+        <button class="modal-close" data-close-modal="confirm-overlay" type="button" aria-label="关闭">×</button>
+        <span class="kicker danger-text">SYSTEM CHECKPOINT</span>
+        <h2 id="confirm-title">确认操作</h2>
+        <p id="confirm-copy">此操作会清除当前实验舱的回声与因果缓存。</p>
+        <div class="modal-action-row">
+          <button class="button button-ghost" id="confirm-cancel" type="button">取消</button>
+          <button class="button button-danger" id="confirm-accept" type="button">确认清空</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-layer" id="pause-overlay" aria-hidden="true">
+      <div class="modal pause-modal">
+        <button class="modal-close" data-close-modal="pause-overlay" type="button" aria-label="关闭">×</button>
+        <span class="kicker">TEMPORAL FIELD SUSPENDED</span>
+        <h2>实验暂停</h2>
+        <p class="pause-copy">当前因果场已冻结。离开不会丢失本层已固化的回声，但当前未固化的时间线会重置。</p>
+        <div class="pause-actions">
+          <button class="button button-primary" id="resume-button" type="button">继续实验 <span class="button-arrow">→</span></button>
+          <button class="button button-ghost" id="pause-restart-button" type="button">重写当前时间线</button>
+          <button class="button button-ghost" id="pause-chapters-button" type="button">实验舱档案</button>
+          <button class="button button-ghost" id="pause-quit-button" type="button">返回控制室</button>
+        </div>
+        <div class="pause-shortcuts">
+          <span><kbd>ESC</kbd> 返回</span><span><kbd>H</kbd> 操作手册</span><span><kbd>M</kbd> 声音</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-layer" id="complete-overlay" aria-hidden="true">
+      <div class="modal complete-modal">
+        <div class="complete-halo" aria-hidden="true"></div>
+        <div class="complete-topline"><span>CAUSAL STABILITY RESTORED</span><span id="complete-stamp">CHAMBER 01</span></div>
+        <span class="kicker" id="complete-kicker">EXPERIMENT COMPLETE</span>
+        <h2 id="complete-title">校准完成</h2>
+        <p class="complete-copy" id="complete-copy"></p>
+        <div class="grade-lockup">
+          <span>EVALUATION</span>
+          <strong id="complete-grade">S</strong>
+          <small id="complete-grade-label">PERFECT RECURSION</small>
+        </div>
+        <div class="complete-stats">
+          <div><span>ACTIONS</span><strong id="stat-actions">000</strong></div>
+          <div><span>FORKS</span><strong id="stat-forks">0</strong></div>
+          <div><span>REWINDS</span><strong id="stat-resets">0</strong></div>
+          <div><span>ELAPSED</span><strong id="stat-time">00:00</strong></div>
+        </div>
+        <p class="complete-quote" id="complete-quote"></p>
+        <div class="modal-action-row">
+          <button class="button button-ghost" id="replay-button" type="button">重访实验舱</button>
+          <button class="button button-primary" id="next-chamber-button" type="button">进入下一实验舱 <span class="button-arrow">↗</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-layer ending-layer" id="ending-overlay" aria-hidden="true">
+      <div class="ending-shell">
+        <div class="ending-topline"><span>PARADOX CORE / FINAL OBSERVATION</span><span>03:17:42 → 03:17:42</span></div>
+        <div class="ending-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <span class="kicker">THE LOOP IS CLOSED</span>
+        <h2>闭环完成</h2>
+        <div class="ending-copy" id="ending-copy">
+          <p>门开了。核心室里没有机器，只有成千上万个你，安静地站在同一秒里。</p>
+          <p>HELIX 的声音第一次出现了停顿。“你不是第 1,439 次尝试。你是第 1,439 个答案。”</p>
+          <p>悖论引擎需要的不是关闭，而是一个愿意留在闭环中的观测者。你将手放上核心。过去的回声一个接一个走进光里。</p>
+          <p>设施恢复稳定。七分钟后，在另一条时间线上，你再次睁开眼睛。</p>
+        </div>
+        <div class="ending-final">
+          <span>MERIDIAN FACILITY / ALL CHAMBERS STABILIZED</span>
+          <strong>你听见自己的声音，从未来传来。</strong>
+        </div>
+        <div class="modal-action-row">
+          <button class="button button-ghost" id="ending-archive-button" type="button">查看实验档案</button>
+          <button class="button button-primary" id="ending-title-button" type="button">返回控制室</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sr-only" id="live-region" aria-live="assertive"></div>
+    <noscript>本游戏需要启用 JavaScript 才能运行。</noscript>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{
+  "reviewer": "independent unprimed subagent",
+  "captures": [
+    "title-desktop.png",
+    "game-desktop.png",
+    "sync-desktop.png",
+    "archive-desktop.png",
+    "ending-desktop.png",
+    "game-mobile.png",
+    "sync-mobile.png",
+    "archive-mobile.png"
+  ],
+  "verdict": "CURRENT WINS",
+  "largest_gap": "Mobile re-staging: fixed-height monitor regions cut the PARADOX SYNC rule and the archive schematic was covered by its footer action bar.",
+  "findings": [
+    {
+      "severity": "P1",
+      "region": "sync-mobile — CAUSALITY MONITOR lower third",
+      "observation": "The mechanic block was cut mid-sentence by the panel bottom; the only sign of more content was a 2px inner scrollbar.",
+      "consequence": "On the sector that teaches synchronization, the rule itself was unreadable.",
+      "repair": "Reduced the synced-level stage height, shortened the rule to a fully visible two-line summary, and capped the causal log to one line in synced state.",
+      "confidence": "render-certain",
+      "resolution": "fixed and re-rendered; monitorScrollHeight equals clientHeight"
+    },
+    {
+      "severity": "P2",
+      "region": "archive-mobile — fixed action bar over SCHEMATIC",
+      "observation": "The fixed bottom CTA sat on top of the map preview.",
+      "consequence": "The only sector preview looked clipped at first paint.",
+      "repair": "Archive mobile now uses a flex column with one scrolling main area and an in-flow footer action bar.",
+      "confidence": "render-certain",
+      "resolution": "fixed and re-rendered; main and footer do not overlap"
+    },
+    {
+      "severity": "P2",
+      "region": "game-desktop / sync-desktop — top-right notification stack",
+      "observation": "Notifications covered the monitor headings and stat labels; fragments of labels peeked out at the viewport edge.",
+      "consequence": "Telemetry was hidden while numbers remained unlabeled.",
+      "repair": "Toast geometry was widened on desktop and clipped fringe text removed; full non-overlap requires a larger layout change.",
+      "confidence": "render-certain",
+      "resolution": "partially resolved — documented as non-blocking"
+    },
+    {
+      "severity": "P2",
+      "region": "charge cluster — header / rail / command bar",
+      "observation": "The same resource was named CHARGE, ECHO CHARGE, and REWIND CAPACITY, and an empty meter could read as full.",
+      "consequence": "Resource remaining and identity were ambiguous.",
+      "repair": "Unified the name to ECHO CHARGE / 余响; empty meters are now outlined segmented slots.",
+      "confidence": "render-certain",
+      "resolution": "fixed and re-rendered"
+    },
+    {
+      "severity": "P2",
+      "region": "sync node chips",
+      "observation": "Some sync chips were circles and some rectangles with no visible legend in the captured state.",
+      "consequence": "The row looked like a rendering inconsistency.",
+      "repair": "Kept the intentional circle-vs-square distinction for normal nodes vs mass cradles, and made the ○/□ legend persist in the latched and mobile states.",
+      "confidence": "render-certain",
+      "resolution": "explained; legend now visible"
+    },
+    {
+      "severity": "P2",
+      "region": "ending-desktop — headline and choice cards",
+      "observation": "The first card looked pre-selected; the warning was tiny; the headline wrapped to a two-character orphan.",
+      "consequence": "The irreversible choice looked ambiguous.",
+      "repair": "Neutral cards by default; warning moved above the cards and enlarged; desktop headline one line and mobile headline balanced manually.",
+      "confidence": "aesthetic-judgment",
+      "resolution": "fixed and re-rendered"
+    }
+  ]
+}
